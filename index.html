@@ -1,0 +1,1115 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature World Fruits Seedlings | Premium Quality Seedlings | Makuyu, Kenya</title>
+  <meta name="description" content="Premium fruit and flower seedlings from Nature World in Makuyu, Kenya. Over 100 varieties available with countrywide delivery. Contact Joseph Kinyuti at +254 720 019555">
+  <meta name="keywords" content="fruit seedlings, flower seedlings, Kenya, Makuyu, mango seedlings, rose seedlings, countrywide delivery"><!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico"><!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><!-- Data SDK -->
+  <script src="/_sdk/data_sdk.js"></script><!-- Element SDK -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #FFA726;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #FFA726;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(76, 175, 80, 0.8));
+            color: white;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            margin-top: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .delivery-banner {
+            background: #FF9800;
+            color: white;
+            padding: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary {
+            background: #FF9800;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #F57C00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #2E7D32;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Featured Sections */
+        .featured-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #2E7D32;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #E8F5E8, #C8E6C9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #4CAF50;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-image::after {
+            content: 'Image Coming Soon';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-info h3 {
+            font-size: 1.3rem;
+            color: #2E7D32;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-category {
+            background: #E8F5E8;
+            color: #2E7D32;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-small {
+            padding: 0.6rem 1rem;
+            font-size: 0.9rem;
+            border-radius: 25px;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+        }
+
+        .btn-call {
+            background: #2196F3;
+            color: white;
+        }
+
+        .btn-call:hover {
+            background: #1976D2;
+        }
+
+        .btn-cart {
+            background: #FF9800;
+            color: white;
+        }
+
+        .btn-cart:hover {
+            background: #F57C00;
+        }
+
+        /* About Section */
+        .about-section {
+            background: #F8F9FA;
+            padding: 4rem 2rem;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #2E7D32;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .about-image {
+            background: linear-gradient(45deg, #E8F5E8, #C8E6C9);
+            height: 300px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: #4CAF50;
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: #F8F9FA;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .testimonial-card .stars {
+            color: #FFA726;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .testimonial-card .author {
+            font-weight: bold;
+            color: #2E7D32;
+        }
+
+        /* Contact CTA */
+        .contact-cta {
+            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1B5E20;
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #E8F5E8;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: #FFA726;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #2E7D32;
+            color: #A5D6A7;
+        }
+
+        /* Floating WhatsApp */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* Loading States */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin: -10px 0 0 -10px;
+            border: 2px solid #4CAF50;
+            border-top: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .product-actions {
+                flex-direction: column;
+            }
+
+            .btn-small {
+                min-width: auto;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .hero {
+                padding: 6rem 1rem 3rem;
+            }
+
+            .featured-section {
+                padding: 3rem 1rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Header -->
+  <header class="header">
+   <nav class="nav-container">
+    <div class="logo"><i class="fas fa-seedling"></i> <span>Nature World</span>
+    </div>
+    <ul class="nav-menu">
+     <li><a href="index.html">Home</a></li>
+     <li><a href="seedlings.html">All Seedlings</a></li>
+     <li><a href="videos.html">Videos</a></li>
+     <li><a href="about.html">About</a></li>
+     <li><a href="contact.html">Contact</a></li>
+     <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+    <div class="social-links"><a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook"></i> </a> <a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> </a>
+    </div><button class="mobile-menu-btn"> <i class="fas fa-bars"></i> </button>
+   </nav>
+  </header><!-- Hero Section -->
+  <section class="hero">
+   <video class="hero-video" autoplay muted loop><source src="videos/herovideo1.mp4" type="video/mp4">
+   </video>
+   <div class="hero-content" data-aos="fade-up">
+    <div class="delivery-banner" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-truck"></i> <span id="delivery-message">We Deliver Countrywide Across Kenya!</span>
+    </div>
+    <h1 id="hero-title">Premium Quality Seedlings</h1>
+    <p id="hero-subtitle">Grow Your Dreams with Nature World - Over 100 Varieties of Fruit &amp; Flower Seedlings</p>
+    <div class="cta-buttons"><a href="seedlings.html" class="btn btn-primary"> <i class="fas fa-leaf"></i> View All Seedlings </a> <a href="https://wa.me/254720019555?text=Hello%20Nature%20World!%20I'm%20interested%20in%20your%20seedlings." class="btn btn-secondary" target="_blank" rel="noopener noreferrer"> <i class="fab fa-whatsapp"></i> Order on WhatsApp </a>
+    </div>
+   </div>
+  </section><!-- Featured Fruit Seedlings -->
+  <section class="featured-section">
+   <div class="section-header" data-aos="fade-up">
+    <h2>Featured Fruit Seedlings</h2>
+    <p>Premium quality fruit seedlings that thrive in Kenyan climate</p>
+   </div>
+   <div class="products-grid" id="featured-fruits"><!-- Featured fruit products will be loaded here -->
+   </div>
+   <div class="text-center" data-aos="fade-up"><a href="seedlings.html?category=fruits" class="btn btn-primary"> <i class="fas fa-apple-alt"></i> View All Fruit Seedlings </a>
+   </div>
+  </section><!-- Featured Flower Seedlings -->
+  <section class="featured-section" style="background: #F8F9FA;">
+   <div class="section-header" data-aos="fade-up">
+    <h2>Featured Flower Seedlings</h2>
+    <p>Beautiful flowering plants to enhance your garden and landscape</p>
+   </div>
+   <div class="products-grid" id="featured-flowers"><!-- Featured flower products will be loaded here -->
+   </div>
+   <div class="text-center" data-aos="fade-up"><a href="seedlings.html?category=flowers" class="btn btn-primary"> <i class="fas fa-flower"></i> View All Flower Seedlings </a>
+   </div>
+  </section><!-- About Section -->
+  <section class="about-section">
+   <div class="about-content" data-aos="fade-up">
+    <div class="about-text">
+     <h2 id="about-title">About Nature World</h2>
+     <p id="about-text">Located in the heart of Makuyu, Kenya, Nature World Fruits Seedlings has been your trusted partner in growing dreams since our establishment. We specialize in providing premium quality fruit and flower seedlings that are perfectly adapted to the Kenyan climate.</p>
+     <p>With over 100 varieties of carefully selected seedlings, we serve customers across Kenya with reliable countrywide delivery. Our commitment to quality and customer satisfaction has made us a leading name in the seedling industry.</p><a href="about.html" class="btn btn-primary"> <i class="fas fa-info-circle"></i> Learn More About Us </a>
+    </div>
+    <div class="about-image" data-aos="fade-left"><i class="fas fa-seedling"></i>
+    </div>
+   </div>
+  </section><!-- Testimonials -->
+  <section class="testimonials-section">
+   <div class="section-header" data-aos="fade-up">
+    <h2>What Our Customers Say</h2>
+    <p>Trusted by thousands of satisfied customers across Kenya</p>
+   </div>
+   <div class="testimonials-grid">
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+     <div class="stars">
+      ★★★★★
+     </div>
+     <p>"Excellent quality seedlings! My mango trees are thriving and I'm expecting my first harvest soon. Nature World's delivery was prompt and professional."</p>
+     <div class="author">
+      - Mary Wanjiku, Nairobi
+     </div>
+    </div>
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+     <div class="stars">
+      ★★★★★
+     </div>
+     <p>"The rose seedlings I ordered have transformed my garden completely. Beautiful flowers and healthy plants. Highly recommend Nature World!"</p>
+     <div class="author">
+      - John Kamau, Mombasa
+     </div>
+    </div>
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+     <div class="stars">
+      ★★★★★
+     </div>
+     <p>"Professional service and quality seedlings. They delivered to Kisumu without any issues. My avocado seedlings are growing perfectly!"</p>
+     <div class="author">
+      - Grace Akinyi, Kisumu
+     </div>
+    </div>
+   </div>
+  </section><!-- Contact CTA -->
+  <section class="contact-cta">
+   <div data-aos="fade-up">
+    <h2>Ready to Start Growing?</h2>
+    <p>Contact us today for premium quality seedlings delivered right to your doorstep anywhere in Kenya</p>
+    <div class="cta-buttons"><a href="https://wa.me/254720019555?text=Hello%20Nature%20World!%20I'm%20interested%20in%20your%20seedlings." class="btn btn-primary" target="_blank" rel="noopener noreferrer"> <i class="fab fa-whatsapp"></i> WhatsApp Us </a> <a href="tel:+254720019555" class="btn btn-secondary"> <i class="fas fa-phone"></i> Call Now </a> <a href="contact.html" class="btn btn-secondary"> <i class="fas fa-envelope"></i> Contact Us </a>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="footer">
+   <div class="footer-content">
+    <div class="footer-section">
+     <h3>Nature World Fruits Seedlings</h3>
+     <p><i class="fas fa-map-marker-alt"></i> A2, Makuyu, Kenya</p>
+     <p><i class="fas fa-phone"></i> +254 720 019555</p>
+     <p><i class="fas fa-envelope"></i> josephkinyuti5@gmail.com</p>
+    </div>
+    <div class="footer-section">
+     <h3>Quick Links</h3><a href="index.html">Home</a> <a href="seedlings.html">All Seedlings</a> <a href="videos.html">Videos</a> <a href="about.html">About Us</a> <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-section">
+     <h3>Categories</h3><a href="seedlings.html?category=fruits">Fruit Seedlings</a> <a href="seedlings.html?category=flowers">Flower Seedlings</a> <a href="cart.html">Shopping Cart</a>
+    </div>
+    <div class="footer-section">
+     <h3>Follow Us</h3><a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook"></i> Facebook </a> <a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> Instagram </a>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>© 2024 Nature World Fruits Seedlings. All rights reserved. | Makuyu, Kenya</p>
+   </div>
+  </footer><!-- Floating WhatsApp Button --> <a href="https://wa.me/254720019555?text=Hello%20Nature%20World!%20I'm%20interested%20in%20your%20seedlings." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp"> <i class="fab fa-whatsapp"></i> </a> <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+        // Default configuration
+        const defaultConfig = {
+            hero_title: "Premium Quality Seedlings",
+            hero_subtitle: "Grow Your Dreams with Nature World - Over 100 Varieties of Fruit & Flower Seedlings",
+            about_title: "About Nature World",
+            about_text: "Located in the heart of Makuyu, Kenya, Nature World Fruits Seedlings has been your trusted partner in growing dreams since our establishment. We specialize in providing premium quality fruit and flower seedlings that are perfectly adapted to the Kenyan climate.",
+            delivery_message: "We Deliver Countrywide Across Kenya!",
+            primary_color: "#2E7D32",
+            secondary_color: "#4CAF50",
+            accent_color: "#FF9800",
+            text_color: "#333333",
+            background_color: "#ffffff"
+        };
+
+        // Sample seedlings data
+        const sampleSeedlings = [
+            // Fruit Seedlings
+            {
+                id: "mango-001",
+                name: "Premium Mango Seedlings",
+                category: "fruits",
+                description: "High-quality grafted mango seedlings. Bears sweet, juicy fruits in 2-3 years. Perfect for Kenyan climate.",
+                image: "images/mango-seedlings.jpg",
+                featured: true
+            },
+            {
+                id: "avocado-001",
+                name: "Hass Avocado Seedlings",
+                category: "fruits",
+                description: "Premium Hass avocado variety. Rich, creamy texture. Excellent for commercial farming and home gardens.",
+                image: "images/avocado-seedlings.jpg",
+                featured: true
+            },
+            {
+                id: "orange-001",
+                name: "Sweet Orange Seedlings",
+                category: "fruits",
+                description: "Juicy sweet oranges perfect for fresh consumption and juice. Disease-resistant variety adapted to local conditions.",
+                image: "images/orange-seedlings.jpg",
+                featured: true
+            },
+            {
+                id: "passion-001",
+                name: "Passion Fruit Seedlings",
+                category: "fruits",
+                description: "Purple passion fruit variety. Fast-growing vine that produces aromatic, flavorful fruits within 12 months.",
+                image: "images/passion-fruit-seedlings.jpg",
+                featured: false
+            },
+            {
+                id: "strawberry-001",
+                name: "Strawberry Seedlings",
+                category: "fruits",
+                description: "Sweet, red strawberries perfect for fresh eating. Ideal for container gardening and small spaces.",
+                image: "images/strawberry-seedlings.jpg",
+                featured: false
+            },
+            {
+                id: "lemon-001",
+                name: "Lemon Seedlings",
+                category: "fruits",
+                description: "Aromatic lemon trees producing juicy, acidic fruits. Perfect for cooking, drinks, and natural remedies.",
+                image: "images/lemon-seedlings.jpg",
+                featured: true
+            },
+            // Flower Seedlings
+            {
+                id: "rose-001",
+                name: "Premium Rose Seedlings",
+                category: "flowers",
+                description: "Beautiful hybrid roses in multiple colors. Perfect for gardens, landscaping, and cut flower production.",
+                image: "images/rose-seedlings.jpg",
+                featured: true
+            },
+            {
+                id: "sunflower-001",
+                name: "Giant Sunflower Seedlings",
+                category: "flowers",
+                description: "Impressive giant sunflowers that can grow up to 3 meters tall. Perfect for garden borders and bird feeding.",
+                image: "images/sunflower-seedlings.jpg",
+                featured: true
+            },
+            {
+                id: "marigold-001",
+                name: "Marigold Seedlings",
+                category: "flowers",
+                description: "Bright, colorful marigolds that bloom continuously. Natural pest deterrent and perfect for companion planting.",
+                image: "images/marigold-seedlings.jpg",
+                featured: false
+            },
+            {
+                id: "hibiscus-001",
+                name: "Hibiscus Seedlings",
+                category: "flowers",
+                description: "Tropical hibiscus with large, showy flowers. Available in red, pink, yellow, and white varieties.",
+                image: "images/hibiscus-seedlings.jpg",
+                featured: true
+            },
+            {
+                id: "bougainvillea-001",
+                name: "Bougainvillea Seedlings",
+                category: "flowers",
+                description: "Vibrant bougainvillea perfect for hedges, walls, and decorative purposes. Drought-resistant and long-blooming.",
+                image: "images/bougainvillea-seedlings.jpg",
+                featured: false
+            },
+            {
+                id: "jasmine-001",
+                name: "Jasmine Seedlings",
+                category: "flowers",
+                description: "Fragrant jasmine flowers perfect for evening gardens. Sweet scent and beautiful white blooms.",
+                image: "images/jasmine-seedlings.jpg",
+                featured: true
+            }
+        ];
+
+        // Data handler for cart functionality
+        const dataHandler = {
+            onDataChanged(cartData) {
+                updateCartCount(cartData.length);
+            }
+        };
+
+        // Initialize page
+        async function initializePage() {
+            // Initialize AOS animations
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            // Initialize Data SDK
+            if (window.dataSdk) {
+                const initResult = await window.dataSdk.init(dataHandler);
+                if (!initResult.isOk) {
+                    console.error("Failed to initialize data SDK");
+                }
+            }
+
+            // Initialize Element SDK
+            if (window.elementSdk) {
+                await window.elementSdk.init({
+                    defaultConfig,
+                    onConfigChange: async (config) => {
+                        // Update hero content
+                        const heroTitle = document.getElementById('hero-title');
+                        const heroSubtitle = document.getElementById('hero-subtitle');
+                        const aboutTitle = document.getElementById('about-title');
+                        const aboutText = document.getElementById('about-text');
+                        const deliveryMessage = document.getElementById('delivery-message');
+
+                        if (heroTitle) heroTitle.textContent = config.hero_title || defaultConfig.hero_title;
+                        if (heroSubtitle) heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+                        if (aboutTitle) aboutTitle.textContent = config.about_title || defaultConfig.about_title;
+                        if (aboutText) aboutText.textContent = config.about_text || defaultConfig.about_text;
+                        if (deliveryMessage) deliveryMessage.textContent = config.delivery_message || defaultConfig.delivery_message;
+
+                        // Update colors
+                        const primaryColor = config.primary_color || defaultConfig.primary_color;
+                        const secondaryColor = config.secondary_color || defaultConfig.secondary_color;
+                        const accentColor = config.accent_color || defaultConfig.accent_color;
+                        const textColor = config.text_color || defaultConfig.text_color;
+                        const backgroundColor = config.background_color || defaultConfig.background_color;
+
+                        document.documentElement.style.setProperty('--primary-color', primaryColor);
+                        document.documentElement.style.setProperty('--secondary-color', secondaryColor);
+                        document.documentElement.style.setProperty('--accent-color', accentColor);
+                        document.documentElement.style.setProperty('--text-color', textColor);
+                        document.documentElement.style.setProperty('--background-color', backgroundColor);
+
+                        // Apply colors to elements
+                        document.body.style.backgroundColor = backgroundColor;
+                        document.body.style.color = textColor;
+                    },
+                    mapToCapabilities: (config) => ({
+                        recolorables: [
+                            {
+                                get: () => config.primary_color || defaultConfig.primary_color,
+                                set: (value) => {
+                                    if (window.elementSdk) {
+                                        window.elementSdk.setConfig({ primary_color: value });
+                                    }
+                                }
+                            },
+                            {
+                                get: () => config.secondary_color || defaultConfig.secondary_color,
+                                set: (value) => {
+                                    if (window.elementSdk) {
+                                        window.elementSdk.setConfig({ secondary_color: value });
+                                    }
+                                }
+                            },
+                            {
+                                get: () => config.accent_color || defaultConfig.accent_color,
+                                set: (value) => {
+                                    if (window.elementSdk) {
+                                        window.elementSdk.setConfig({ accent_color: value });
+                                    }
+                                }
+                            },
+                            {
+                                get: () => config.text_color || defaultConfig.text_color,
+                                set: (value) => {
+                                    if (window.elementSdk) {
+                                        window.elementSdk.setConfig({ text_color: value });
+                                    }
+                                }
+                            },
+                            {
+                                get: () => config.background_color || defaultConfig.background_color,
+                                set: (value) => {
+                                    if (window.elementSdk) {
+                                        window.elementSdk.setConfig({ background_color: value });
+                                    }
+                                }
+                            }
+                        ],
+                        borderables: [],
+                        fontEditable: undefined,
+                        fontSizeable: undefined
+                    }),
+                    mapToEditPanelValues: (config) => new Map([
+                        ["hero_title", config.hero_title || defaultConfig.hero_title],
+                        ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+                        ["about_title", config.about_title || defaultConfig.about_title],
+                        ["about_text", config.about_text || defaultConfig.about_text],
+                        ["delivery_message", config.delivery_message || defaultConfig.delivery_message]
+                    ])
+                });
+            }
+
+            // Load featured products
+            loadFeaturedProducts();
+            
+            // Update cart count on page load
+            updateCartCountFromStorage();
+        }
+
+        // Load featured products
+        function loadFeaturedProducts() {
+            const featuredFruits = sampleSeedlings.filter(s => s.category === 'fruits' && s.featured).slice(0, 3);
+            const featuredFlowers = sampleSeedlings.filter(s => s.category === 'flowers' && s.featured).slice(0, 3);
+
+            renderProducts('featured-fruits', featuredFruits);
+            renderProducts('featured-flowers', featuredFlowers);
+        }
+
+        // Render products
+        function renderProducts(containerId, products) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            container.innerHTML = products.map(product => `
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\\'fas fa-${product.category === 'fruits' ? 'apple-alt' : 'flower'}\\'></i>';">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category === 'fruits' ? 'Fruit' : 'Flower'} Seedling</div>
+                        <h3>${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-actions">
+                            <a href="https://wa.me/254720019555?text=Hello%20Nature%20World!%20I'm%20interested%20in%20your%20${encodeURIComponent(product.name)}." 
+                               class="btn btn-whatsapp btn-small" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="tel:+254720019555" class="btn btn-call btn-small">
+                                <i class="fas fa-phone"></i> Call
+                            </a>
+                            <button onclick="addToCart('${product.id}')" class="btn btn-cart btn-small">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Add to cart function
+        async function addToCart(productId) {
+            const product = sampleSeedlings.find(p => p.id === productId);
+            if (!product) return;
+
+            const button = event.target;
+            const originalText = button.innerHTML;
+            
+            // Show loading state
+            button.classList.add('loading');
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Adding...';
+            button.disabled = true;
+
+            try {
+                if (window.dataSdk) {
+                    const cartItem = {
+                        id: product.id,
+                        name: product.name,
+                        category: product.category,
+                        description: product.description,
+                        image: product.image,
+                        addedAt: new Date().toISOString()
+                    };
+
+                    const result = await window.dataSdk.create(cartItem);
+                    
+                    if (result.isOk) {
+                        // Show success feedback
+                        button.innerHTML = '<i class="fas fa-check"></i> Added!';
+                        button.style.background = '#4CAF50';
+                        
+                        setTimeout(() => {
+                            button.innerHTML = originalText;
+                            button.style.background = '';
+                            button.classList.remove('loading');
+                            button.disabled = false;
+                        }, 2000);
+                    } else {
+                        throw new Error('Failed to add to cart');
+                    }
+                } else {
+                    // Fallback to localStorage if SDK not available
+                    const cart = JSON.parse(localStorage.getItem('natureWorldCart') || '[]');
+                    const existingItem = cart.find(item => item.id === product.id);
+                    
+                    if (!existingItem) {
+                        cart.push({
+                            id: product.id,
+                            name: product.name,
+                            category: product.category,
+                            description: product.description,
+                            image: product.image,
+                            addedAt: new Date().toISOString()
+                        });
+                        localStorage.setItem('natureWorldCart', JSON.stringify(cart));
+                        updateCartCount(cart.length);
+                    }
+                    
+                    button.innerHTML = '<i class="fas fa-check"></i> Added!';
+                    button.style.background = '#4CAF50';
+                    
+                    setTimeout(() => {
+                        button.innerHTML = originalText;
+                        button.style.background = '';
+                        button.classList.remove('loading');
+                        button.disabled = false;
+                    }, 2000);
+                }
+            } catch (error) {
+                // Show error feedback
+                button.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error';
+                button.style.background = '#f44336';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                    button.classList.remove('loading');
+                    button.disabled = false;
+                }, 2000);
+            }
+        }
+
+        // Update cart count
+        function updateCartCount(count) {
+            const cartCountElement = document.getElementById('cart-count');
+            if (cartCountElement) {
+                cartCountElement.textContent = count;
+            }
+        }
+
+        // Update cart count from localStorage on page load
+        function updateCartCountFromStorage() {
+            if (!window.dataSdk) {
+                const cart = JSON.parse(localStorage.getItem('natureWorldCart') || '[]');
+                updateCartCount(cart.length);
+            }
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Initialize page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializePage);
+
+        // Add mobile menu event listener
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            }
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'999f81ab20153f24',t:'MTc2MjM3ODc5NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
