@@ -98,29 +98,32 @@
             color: white;
             font-size: 1.5rem;
             cursor: pointer;
-         @media (max-width: 768px) {
+        }
+
+   @media (max-width: 768px) {
     .nav-menu {
+        display: none;
         position: absolute;
-        top: 100%;
+        top: 100%;           /* Just below the header */
         left: 0;
         right: 0;
-        background: #2E7D32;
+        background: #2E7D32; /* Green background */
         flex-direction: column;
         padding: 1rem 2rem;
         box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        z-index: 999;
     }
+
+    /* This is the magic part! */
     .nav-menu.active {
-        display: flex;
+        display: flex;  /* Show menu when "active" class is added */
     }
+
     .nav-menu a {
         padding: 0.75rem 0;
         border-bottom: 1px solid rgba(255,255,255,0.1);
+        color: white;
     }
-    .nav-menu a:last-child {
-        border-bottom: none;
-        }
-
+}
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(76, 175, 80, 0.8));
@@ -1115,21 +1118,11 @@
             }
         }
 
-      <script>
-    // Mobile menu toggle
-    function toggleMobileMenu() {
-        const navMenu = document.querySelector('.nav-menu');
-        const btn = document.querySelector('.mobile-menu-btn i');
-        navMenu.classList.toggle('active');
-        // Optional: change icon
-        if (navMenu.classList.contains('active')) {
-            btn.classList.replace('fa-bars', 'fa-times');
-        } else {
-            btn.classList.replace('fa-times', 'fa-bars');
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
         }
-    }
-    });
-</script>
 
         // Initialize page when DOM is loaded
         document.addEventListener('DOMContentLoaded', initializePage);
@@ -1141,6 +1134,35 @@
                 mobileMenuBtn.addEventListener('click', toggleMobileMenu);
             }
         });
-    </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'999f81ab20153f24',t:'MTc2MjM3ODc5NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  <script>
+    // This runs when button is clicked
+    function toggleMobileMenu() {
+        const menu = document.querySelector('.nav-menu');
+        const icon = document.querySelector('.mobile-menu-btn i');
+
+        // Toggle the menu
+        menu.classList.toggle('active');
+
+        // Change icon: three lines to X
+        if (menu.classList.contains('active')) {
+            icon.classList.replace('fa-bars', 'fa-times');
+        } else {
+            icon.classList.replace('fa-times', 'fa-bars');
+        }
+    }
+
+    // Wait for page to load, then add click event
+    document.addEventListener('DOMContentLoaded', function () {
+        const button = document.querySelector('.mobile-menu-btn');
+        button.addEventListener('click', toggleMobileMenu);
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.mobile-menu-btn i').classList.replace('fa-times', 'fa-bars');
+            });
+        });
+    });
+</script>
 </html>
