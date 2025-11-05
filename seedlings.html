@@ -1,0 +1,1708 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Seedlings | Nature World Fruits Seedlings | 100+ Varieties | Makuyu, Kenya</title>
+  <meta name="description" content="Browse our complete collection of 100+ fruit and flower seedlings. Premium quality mango, avocado, rose, hibiscus seedlings and more. Countrywide delivery in Kenya.">
+  <meta name="keywords" content="fruit seedlings Kenya, flower seedlings Kenya, mango seedlings, avocado seedlings, rose seedlings, Makuyu seedlings, countrywide delivery"><!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico"><!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><!-- Data SDK -->
+  <script src="/_sdk/data_sdk.js"></script><!-- Element SDK -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #FFA726;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #FFA726;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(76, 175, 80, 0.9)), url('images/seedlings-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            margin-top: 70px;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .page-header p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .delivery-banner {
+            background: #FF9800;
+            color: white;
+            padding: 0.8rem 2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+        }
+
+        /* Filters Section */
+        .filters-section {
+            background: #F8F9FA;
+            padding: 2rem;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        .filters-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 2px solid #E0E0E0;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+
+        .category-filters {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #4CAF50;
+            background: white;
+            color: #4CAF50;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .results-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 500;
+            color: #666;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 3rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(45deg, #E8F5E8, #C8E6C9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #4CAF50;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-image::after {
+            content: 'Image Coming Soon';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-category {
+            background: #E8F5E8;
+            color: #2E7D32;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+
+        .product-info h3 {
+            font-size: 1.3rem;
+            color: #2E7D32;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.6rem 1rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
+            min-width: 110px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-1px);
+        }
+
+        .btn-call {
+            background: #2196F3;
+            color: white;
+        }
+
+        .btn-call:hover {
+            background: #1976D2;
+            transform: translateY(-1px);
+        }
+
+        .btn-cart {
+            background: #FF9800;
+            color: white;
+        }
+
+        .btn-cart:hover {
+            background: #F57C00;
+            transform: translateY(-1px);
+        }
+
+        /* Loading States */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+            position: relative;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin: -10px 0 0 -10px;
+            border: 2px solid #4CAF50;
+            border-top: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* No Results */
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #666;
+        }
+
+        .no-results i {
+            font-size: 4rem;
+            color: #E0E0E0;
+            margin-bottom: 1rem;
+        }
+
+        .no-results h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        .pagination button {
+            padding: 0.8rem 1.2rem;
+            border: 2px solid #4CAF50;
+            background: white;
+            color: #4CAF50;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .pagination button:hover,
+        .pagination button.active {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1B5E20;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #E8F5E8;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: #FFA726;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #2E7D32;
+            color: #A5D6A7;
+        }
+
+        /* Floating WhatsApp */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .page-header p {
+                font-size: 1.1rem;
+            }
+
+            .filters-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-box {
+                min-width: auto;
+            }
+
+            .category-filters {
+                justify-content: center;
+            }
+
+            .results-info {
+                justify-content: center;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .product-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                min-width: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .page-header {
+                padding: 6rem 1rem 3rem;
+            }
+
+            .filters-section {
+                padding: 1.5rem 1rem;
+            }
+
+            .products-section {
+                padding: 2rem 1rem;
+            }
+
+            .filter-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Header -->
+  <header class="header">
+   <nav class="nav-container">
+    <div class="logo"><i class="fas fa-seedling"></i> <span>Nature World</span>
+    </div>
+    <ul class="nav-menu">
+     <li><a href="index.html">Home</a></li>
+     <li><a href="seedlings.html" class="active">All Seedlings</a></li>
+     <li><a href="videos.html">Videos</a></li>
+     <li><a href="about.html">About</a></li>
+     <li><a href="contact.html">Contact</a></li>
+     <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+    <div class="social-links"><a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook"></i> </a> <a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> </a>
+    </div><button class="mobile-menu-btn"> <i class="fas fa-bars"></i> </button>
+   </nav>
+  </header><!-- Page Header -->
+  <section class="page-header">
+   <div data-aos="fade-up">
+    <div class="delivery-banner"><i class="fas fa-truck"></i> Countrywide Delivery Available
+    </div>
+    <h1>All Seedlings Collection</h1>
+    <p>Browse our complete selection of 100+ premium fruit and flower seedlings, carefully selected for the Kenyan climate</p>
+   </div>
+  </section><!-- Filters Section -->
+  <section class="filters-section">
+   <div class="filters-container">
+    <div class="search-box"><i class="fas fa-search search-icon"></i> <input type="text" class="search-input" placeholder="Search seedlings..." id="search-input">
+    </div>
+    <div class="category-filters"><button class="filter-btn active" data-category="all">All Seedlings</button> <button class="filter-btn" data-category="fruits">Fruit Seedlings</button> <button class="filter-btn" data-category="flowers">Flower Seedlings</button>
+    </div>
+    <div class="results-info"><span id="results-count">Loading...</span> <i class="fas fa-filter"></i>
+    </div>
+   </div>
+  </section><!-- Products Section -->
+  <section class="products-section">
+   <div class="products-grid" id="products-grid"><!-- Products will be loaded here -->
+   </div><!-- No Results Message -->
+   <div class="no-results" id="no-results" style="display: none;"><i class="fas fa-search"></i>
+    <h3>No seedlings found</h3>
+    <p>Try adjusting your search terms or category filter</p>
+   </div><!-- Pagination -->
+   <div class="pagination" id="pagination"><!-- Pagination buttons will be generated here -->
+   </div>
+  </section><!-- Footer -->
+  <footer class="footer">
+   <div class="footer-content">
+    <div class="footer-section">
+     <h3>Nature World Fruits Seedlings</h3>
+     <p><i class="fas fa-map-marker-alt"></i> A2, Makuyu, Kenya</p>
+     <p><i class="fas fa-phone"></i> +254 720 019555</p>
+     <p><i class="fas fa-envelope"></i> josephkinyuti5@gmail.com</p>
+    </div>
+    <div class="footer-section">
+     <h3>Quick Links</h3><a href="index.html">Home</a> <a href="seedlings.html">All Seedlings</a> <a href="videos.html">Videos</a> <a href="about.html">About Us</a> <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-section">
+     <h3>Categories</h3><a href="seedlings.html?category=fruits">Fruit Seedlings</a> <a href="seedlings.html?category=flowers">Flower Seedlings</a> <a href="cart.html">Shopping Cart</a>
+    </div>
+    <div class="footer-section">
+     <h3>Follow Us</h3><a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook"></i> Facebook </a> <a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> Instagram </a>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>© 2024 Nature World Fruits Seedlings. All rights reserved. | Makuyu, Kenya</p>
+   </div>
+  </footer><!-- Floating WhatsApp Button --> <a href="https://wa.me/254720019555?text=Hello%20Nature%20World!%20I'm%20interested%20in%20your%20seedlings." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp"> <i class="fab fa-whatsapp"></i> </a> <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+        // Complete seedlings database (100 items)
+        const allSeedlings = [
+            // FRUIT SEEDLINGS (50 items)
+            {
+                id: "mango-001",
+                name: "Premium Mango Seedlings",
+                category: "fruits",
+                description: "High-quality grafted mango seedlings. Bears sweet, juicy fruits in 2-3 years. Perfect for Kenyan climate.",
+                image: "images/mango-seedlings.jpg"
+            },
+            {
+                id: "avocado-001",
+                name: "Hass Avocado Seedlings",
+                category: "fruits",
+                description: "Premium Hass avocado variety. Rich, creamy texture. Excellent for commercial farming and home gardens.",
+                image: "images/avocado-seedlings.jpg"
+            },
+            {
+                id: "orange-001",
+                name: "Sweet Orange Seedlings",
+                category: "fruits",
+                description: "Juicy sweet oranges perfect for fresh consumption and juice. Disease-resistant variety adapted to local conditions.",
+                image: "images/orange-seedlings.jpg"
+            },
+            {
+                id: "passion-001",
+                name: "Passion Fruit Seedlings",
+                category: "fruits",
+                description: "Purple passion fruit variety. Fast-growing vine that produces aromatic, flavorful fruits within 12 months.",
+                image: "images/passion-fruit-seedlings.jpg"
+            },
+            {
+                id: "strawberry-001",
+                name: "Strawberry Seedlings",
+                category: "fruits",
+                description: "Sweet, red strawberries perfect for fresh eating. Ideal for container gardening and small spaces.",
+                image: "images/strawberry-seedlings.jpg"
+            },
+            {
+                id: "lemon-001",
+                name: "Lemon Seedlings",
+                category: "fruits",
+                description: "Aromatic lemon trees producing juicy, acidic fruits. Perfect for cooking, drinks, and natural remedies.",
+                image: "images/lemon-seedlings.jpg"
+            },
+            {
+                id: "papaya-001",
+                name: "Papaya Seedlings",
+                category: "fruits",
+                description: "Fast-growing papaya trees. Sweet, nutritious fruits rich in vitamins. Bears fruit within 12-18 months.",
+                image: "images/papaya-seedlings.jpg"
+            },
+            {
+                id: "guava-001",
+                name: "Guava Seedlings",
+                category: "fruits",
+                description: "Tropical guava variety with sweet, aromatic fruits. High in vitamin C and perfect for fresh eating.",
+                image: "images/guava-seedlings.jpg"
+            },
+            {
+                id: "banana-001",
+                name: "Banana Seedlings",
+                category: "fruits",
+                description: "High-yielding banana variety. Sweet, nutritious fruits perfect for fresh consumption and cooking.",
+                image: "images/banana-seedlings.jpg"
+            },
+            {
+                id: "pineapple-001",
+                name: "Pineapple Seedlings",
+                category: "fruits",
+                description: "Sweet pineapple variety adapted to Kenyan conditions. Takes 18-24 months to mature.",
+                image: "images/pineapple-seedlings.jpg"
+            },
+            {
+                id: "lime-001",
+                name: "Lime Seedlings",
+                category: "fruits",
+                description: "Aromatic lime trees producing juicy, acidic fruits. Perfect for cooking and beverages.",
+                image: "images/lime-seedlings.jpg"
+            },
+            {
+                id: "tangerine-001",
+                name: "Tangerine Seedlings",
+                category: "fruits",
+                description: "Sweet, easy-to-peel tangerines. Perfect for fresh eating and rich in vitamin C.",
+                image: "images/tangerine-seedlings.jpg"
+            },
+            {
+                id: "grapefruit-001",
+                name: "Grapefruit Seedlings",
+                category: "fruits",
+                description: "Large, juicy grapefruits with a perfect balance of sweet and tart flavors.",
+                image: "images/grapefruit-seedlings.jpg"
+            },
+            {
+                id: "pomegranate-001",
+                name: "Pomegranate Seedlings",
+                category: "fruits",
+                description: "Antioxidant-rich pomegranates. Beautiful flowers and nutritious, ruby-red seeds.",
+                image: "images/pomegranate-seedlings.jpg"
+            },
+            {
+                id: "fig-001",
+                name: "Fig Seedlings",
+                category: "fruits",
+                description: "Sweet, soft figs perfect for fresh eating or drying. Drought-tolerant and productive.",
+                image: "images/fig-seedlings.jpg"
+            },
+            {
+                id: "grape-001",
+                name: "Grape Seedlings",
+                category: "fruits",
+                description: "Table grape variety perfect for fresh eating. Sweet, juicy grapes in beautiful clusters.",
+                image: "images/grape-seedlings.jpg"
+            },
+            {
+                id: "apple-001",
+                name: "Apple Seedlings",
+                category: "fruits",
+                description: "Crisp, sweet apples adapted to highland conditions. Perfect for cooler Kenyan regions.",
+                image: "images/apple-seedlings.jpg"
+            },
+            {
+                id: "pear-001",
+                name: "Pear Seedlings",
+                category: "fruits",
+                description: "Juicy, sweet pears with smooth texture. Excellent for fresh eating and cooking.",
+                image: "images/pear-seedlings.jpg"
+            },
+            {
+                id: "peach-001",
+                name: "Peach Seedlings",
+                category: "fruits",
+                description: "Sweet, fuzzy peaches with juicy flesh. Perfect for highland areas with cooler temperatures.",
+                image: "images/peach-seedlings.jpg"
+            },
+            {
+                id: "plum-001",
+                name: "Plum Seedlings",
+                category: "fruits",
+                description: "Sweet, juicy plums in various colors. Excellent for fresh eating and preserves.",
+                image: "images/plum-seedlings.jpg"
+            },
+            {
+                id: "cherry-001",
+                name: "Cherry Seedlings",
+                category: "fruits",
+                description: "Sweet cherries perfect for highland conditions. Beautiful blossoms and delicious fruits.",
+                image: "images/cherry-seedlings.jpg"
+            },
+            {
+                id: "kiwi-001",
+                name: "Kiwi Seedlings",
+                category: "fruits",
+                description: "Exotic kiwi fruits rich in vitamin C. Unique flavor and perfect for highland areas.",
+                image: "images/kiwi-seedlings.jpg"
+            },
+            {
+                id: "dragon-fruit-001",
+                name: "Dragon Fruit Seedlings",
+                category: "fruits",
+                description: "Exotic dragon fruit cactus. Beautiful flowers and unique, nutritious fruits.",
+                image: "images/dragon-fruit-seedlings.jpg"
+            },
+            {
+                id: "custard-apple-001",
+                name: "Custard Apple Seedlings",
+                category: "fruits",
+                description: "Sweet, creamy custard apples. Unique texture and delicious tropical flavor.",
+                image: "images/custard-apple-seedlings.jpg"
+            },
+            {
+                id: "jackfruit-001",
+                name: "Jackfruit Seedlings",
+                category: "fruits",
+                description: "Large, sweet jackfruits. Versatile fruit perfect for fresh eating and cooking.",
+                image: "images/jackfruit-seedlings.jpg"
+            },
+            {
+                id: "breadfruit-001",
+                name: "Breadfruit Seedlings",
+                category: "fruits",
+                description: "Nutritious breadfruit trees. Starchy fruits perfect for cooking and baking.",
+                image: "images/breadfruit-seedlings.jpg"
+            },
+            {
+                id: "soursop-001",
+                name: "Soursop Seedlings",
+                category: "fruits",
+                description: "Exotic soursop with unique flavor. Creamy, white flesh with tropical taste.",
+                image: "images/soursop-seedlings.jpg"
+            },
+            {
+                id: "rambutan-001",
+                name: "Rambutan Seedlings",
+                category: "fruits",
+                description: "Exotic rambutan fruits. Sweet, translucent flesh similar to lychee.",
+                image: "images/rambutan-seedlings.jpg"
+            },
+            {
+                id: "lychee-001",
+                name: "Lychee Seedlings",
+                category: "fruits",
+                description: "Sweet, aromatic lychees. Delicate flavor and beautiful pink shells.",
+                image: "images/lychee-seedlings.jpg"
+            },
+            {
+                id: "longan-001",
+                name: "Longan Seedlings",
+                category: "fruits",
+                description: "Sweet longan fruits similar to lychee. Translucent flesh with delicate flavor.",
+                image: "images/longan-seedlings.jpg"
+            },
+            {
+                id: "star-fruit-001",
+                name: "Star Fruit Seedlings",
+                category: "fruits",
+                description: "Beautiful star-shaped fruits. Crisp texture and mildly sweet flavor.",
+                image: "images/star-fruit-seedlings.jpg"
+            },
+            {
+                id: "tamarind-001",
+                name: "Tamarind Seedlings",
+                category: "fruits",
+                description: "Tangy tamarind pods perfect for cooking and beverages. Long-lived trees.",
+                image: "images/tamarind-seedlings.jpg"
+            },
+            {
+                id: "coconut-001",
+                name: "Coconut Seedlings",
+                category: "fruits",
+                description: "Dwarf coconut variety. Fresh coconut water and meat. Perfect for coastal areas.",
+                image: "images/coconut-seedlings.jpg"
+            },
+            {
+                id: "cashew-001",
+                name: "Cashew Seedlings",
+                category: "fruits",
+                description: "Cashew trees producing nuts and cashew apples. Drought-tolerant and productive.",
+                image: "images/cashew-seedlings.jpg"
+            },
+            {
+                id: "macadamia-001",
+                name: "Macadamia Seedlings",
+                category: "fruits",
+                description: "Premium macadamia nuts. High-value crop perfect for highland areas.",
+                image: "images/macadamia-seedlings.jpg"
+            },
+            {
+                id: "walnut-001",
+                name: "Walnut Seedlings",
+                category: "fruits",
+                description: "Nutritious walnuts perfect for highland conditions. Long-lived productive trees.",
+                image: "images/walnut-seedlings.jpg"
+            },
+            {
+                id: "almond-001",
+                name: "Almond Seedlings",
+                category: "fruits",
+                description: "Sweet almonds adapted to dry conditions. Beautiful blossoms and nutritious nuts.",
+                image: "images/almond-seedlings.jpg"
+            },
+            {
+                id: "pistachio-001",
+                name: "Pistachio Seedlings",
+                category: "fruits",
+                description: "Premium pistachio nuts. Drought-tolerant trees perfect for arid areas.",
+                image: "images/pistachio-seedlings.jpg"
+            },
+            {
+                id: "date-palm-001",
+                name: "Date Palm Seedlings",
+                category: "fruits",
+                description: "Sweet dates from majestic palm trees. Perfect for arid and semi-arid areas.",
+                image: "images/date-palm-seedlings.jpg"
+            },
+            {
+                id: "moringa-001",
+                name: "Moringa Seedlings",
+                category: "fruits",
+                description: "Nutritious moringa trees. Edible leaves, pods, and seeds. Drought-tolerant superfood.",
+                image: "images/moringa-seedlings.jpg"
+            },
+            {
+                id: "baobab-001",
+                name: "Baobab Seedlings",
+                category: "fruits",
+                description: "Iconic baobab trees. Nutritious fruits and long-lived, drought-resistant trees.",
+                image: "images/baobab-seedlings.jpg"
+            },
+            {
+                id: "neem-001",
+                name: "Neem Seedlings",
+                category: "fruits",
+                description: "Medicinal neem trees. Natural pesticide properties and drought tolerance.",
+                image: "images/neem-seedlings.jpg"
+            },
+            {
+                id: "eucalyptus-001",
+                name: "Eucalyptus Seedlings",
+                category: "fruits",
+                description: "Fast-growing eucalyptus trees. Perfect for timber, poles, and windbreaks.",
+                image: "images/eucalyptus-seedlings.jpg"
+            },
+            {
+                id: "bamboo-001",
+                name: "Bamboo Seedlings",
+                category: "fruits",
+                description: "Fast-growing bamboo varieties. Perfect for construction, crafts, and erosion control.",
+                image: "images/bamboo-seedlings.jpg"
+            },
+            {
+                id: "tea-001",
+                name: "Tea Seedlings",
+                category: "fruits",
+                description: "Premium tea bushes perfect for highland conditions. Start your own tea plantation.",
+                image: "images/tea-seedlings.jpg"
+            },
+            {
+                id: "coffee-001",
+                name: "Coffee Seedlings",
+                category: "fruits",
+                description: "Arabica coffee seedlings. Premium coffee beans perfect for highland cultivation.",
+                image: "images/coffee-seedlings.jpg"
+            },
+            {
+                id: "vanilla-001",
+                name: "Vanilla Seedlings",
+                category: "fruits",
+                description: "Exotic vanilla orchids. High-value spice crop perfect for humid conditions.",
+                image: "images/vanilla-seedlings.jpg"
+            },
+            {
+                id: "black-pepper-001",
+                name: "Black Pepper Seedlings",
+                category: "fruits",
+                description: "Climbing pepper vines. Premium spice crop with high market value.",
+                image: "images/black-pepper-seedlings.jpg"
+            },
+            {
+                id: "cardamom-001",
+                name: "Cardamom Seedlings",
+                category: "fruits",
+                description: "Aromatic cardamom plants. High-value spice perfect for highland conditions.",
+                image: "images/cardamom-seedlings.jpg"
+            },
+            {
+                id: "cinnamon-001",
+                name: "Cinnamon Seedlings",
+                category: "fruits",
+                description: "Aromatic cinnamon trees. Valuable spice crop with medicinal properties.",
+                image: "images/cinnamon-seedlings.jpg"
+            },
+            {
+                id: "ginger-001",
+                name: "Ginger Seedlings",
+                category: "fruits",
+                description: "Fresh ginger rhizomes. Medicinal and culinary uses with high market demand.",
+                image: "images/ginger-seedlings.jpg"
+            },
+
+            // FLOWER SEEDLINGS (50 items)
+            {
+                id: "rose-001",
+                name: "Premium Rose Seedlings",
+                category: "flowers",
+                description: "Beautiful hybrid roses in multiple colors. Perfect for gardens, landscaping, and cut flower production.",
+                image: "images/rose-seedlings.jpg"
+            },
+            {
+                id: "sunflower-001",
+                name: "Giant Sunflower Seedlings",
+                category: "flowers",
+                description: "Impressive giant sunflowers that can grow up to 3 meters tall. Perfect for garden borders and bird feeding.",
+                image: "images/sunflower-seedlings.jpg"
+            },
+            {
+                id: "marigold-001",
+                name: "Marigold Seedlings",
+                category: "flowers",
+                description: "Bright, colorful marigolds that bloom continuously. Natural pest deterrent and perfect for companion planting.",
+                image: "images/marigold-seedlings.jpg"
+            },
+            {
+                id: "hibiscus-001",
+                name: "Hibiscus Seedlings",
+                category: "flowers",
+                description: "Tropical hibiscus with large, showy flowers. Available in red, pink, yellow, and white varieties.",
+                image: "images/hibiscus-seedlings.jpg"
+            },
+            {
+                id: "bougainvillea-001",
+                name: "Bougainvillea Seedlings",
+                category: "flowers",
+                description: "Vibrant bougainvillea perfect for hedges, walls, and decorative purposes. Drought-resistant and long-blooming.",
+                image: "images/bougainvillea-seedlings.jpg"
+            },
+            {
+                id: "jasmine-001",
+                name: "Jasmine Seedlings",
+                category: "flowers",
+                description: "Fragrant jasmine flowers perfect for evening gardens. Sweet scent and beautiful white blooms.",
+                image: "images/jasmine-seedlings.jpg"
+            },
+            {
+                id: "lavender-001",
+                name: "Lavender Seedlings",
+                category: "flowers",
+                description: "Aromatic lavender plants. Beautiful purple flowers and calming fragrance. Perfect for herb gardens.",
+                image: "images/lavender-seedlings.jpg"
+            },
+            {
+                id: "petunia-001",
+                name: "Petunia Seedlings",
+                category: "flowers",
+                description: "Colorful petunias perfect for containers and hanging baskets. Continuous blooming in various colors.",
+                image: "images/petunia-seedlings.jpg"
+            },
+            {
+                id: "zinnia-001",
+                name: "Zinnia Seedlings",
+                category: "flowers",
+                description: "Bright, cheerful zinnias in multiple colors. Easy to grow and perfect for cut flowers.",
+                image: "images/zinnia-seedlings.jpg"
+            },
+            {
+                id: "cosmos-001",
+                name: "Cosmos Seedlings",
+                category: "flowers",
+                description: "Delicate cosmos flowers in pink, white, and purple. Perfect for wildflower gardens.",
+                image: "images/cosmos-seedlings.jpg"
+            },
+            {
+                id: "dahlia-001",
+                name: "Dahlia Seedlings",
+                category: "flowers",
+                description: "Spectacular dahlias with large, showy blooms. Perfect for cut flowers and garden displays.",
+                image: "images/dahlia-seedlings.jpg"
+            },
+            {
+                id: "chrysanthemum-001",
+                name: "Chrysanthemum Seedlings",
+                category: "flowers",
+                description: "Beautiful chrysanthemums in various colors and forms. Perfect for autumn displays.",
+                image: "images/chrysanthemum-seedlings.jpg"
+            },
+            {
+                id: "carnation-001",
+                name: "Carnation Seedlings",
+                category: "flowers",
+                description: "Fragrant carnations perfect for cut flowers. Long-lasting blooms in multiple colors.",
+                image: "images/carnation-seedlings.jpg"
+            },
+            {
+                id: "lily-001",
+                name: "Lily Seedlings",
+                category: "flowers",
+                description: "Elegant lilies with large, fragrant blooms. Perfect for formal gardens and cut flowers.",
+                image: "images/lily-seedlings.jpg"
+            },
+            {
+                id: "tulip-001",
+                name: "Tulip Seedlings",
+                category: "flowers",
+                description: "Classic tulips in various colors. Perfect for spring gardens and formal displays.",
+                image: "images/tulip-seedlings.jpg"
+            },
+            {
+                id: "daffodil-001",
+                name: "Daffodil Seedlings",
+                category: "flowers",
+                description: "Cheerful daffodils signaling spring. Bright yellow blooms and easy care.",
+                image: "images/daffodil-seedlings.jpg"
+            },
+            {
+                id: "iris-001",
+                name: "Iris Seedlings",
+                category: "flowers",
+                description: "Elegant iris flowers in purple, blue, and white. Perfect for water gardens and borders.",
+                image: "images/iris-seedlings.jpg"
+            },
+            {
+                id: "gladiolus-001",
+                name: "Gladiolus Seedlings",
+                category: "flowers",
+                description: "Tall gladiolus spikes with colorful blooms. Perfect for cut flowers and back borders.",
+                image: "images/gladiolus-seedlings.jpg"
+            },
+            {
+                id: "orchid-001",
+                name: "Orchid Seedlings",
+                category: "flowers",
+                description: "Exotic orchids with unique, long-lasting blooms. Perfect for indoor and greenhouse growing.",
+                image: "images/orchid-seedlings.jpg"
+            },
+            {
+                id: "anthurium-001",
+                name: "Anthurium Seedlings",
+                category: "flowers",
+                description: "Glossy anthurium flowers in red, pink, and white. Perfect for indoor decoration.",
+                image: "images/anthurium-seedlings.jpg"
+            },
+            {
+                id: "bird-paradise-001",
+                name: "Bird of Paradise Seedlings",
+                category: "flowers",
+                description: "Exotic bird of paradise flowers. Stunning orange and blue blooms resembling tropical birds.",
+                image: "images/bird-paradise-seedlings.jpg"
+            },
+            {
+                id: "plumeria-001",
+                name: "Plumeria Seedlings",
+                category: "flowers",
+                description: "Fragrant plumeria flowers. Beautiful white and yellow blooms with tropical fragrance.",
+                image: "images/plumeria-seedlings.jpg"
+            },
+            {
+                id: "ixora-001",
+                name: "Ixora Seedlings",
+                category: "flowers",
+                description: "Colorful ixora clusters in red, orange, and yellow. Perfect for hedges and tropical gardens.",
+                image: "images/ixora-seedlings.jpg"
+            },
+            {
+                id: "pentas-001",
+                name: "Pentas Seedlings",
+                category: "flowers",
+                description: "Star-shaped pentas flowers. Continuous blooming and perfect for butterfly gardens.",
+                image: "images/pentas-seedlings.jpg"
+            },
+            {
+                id: "vinca-001",
+                name: "Vinca Seedlings",
+                category: "flowers",
+                description: "Hardy vinca flowers in pink, white, and purple. Drought-tolerant and continuous blooming.",
+                image: "images/vinca-seedlings.jpg"
+            },
+            {
+                id: "impatiens-001",
+                name: "Impatiens Seedlings",
+                category: "flowers",
+                description: "Colorful impatiens perfect for shady areas. Continuous blooming in various colors.",
+                image: "images/impatiens-seedlings.jpg"
+            },
+            {
+                id: "begonia-001",
+                name: "Begonia Seedlings",
+                category: "flowers",
+                description: "Beautiful begonias with colorful flowers and foliage. Perfect for containers and shade gardens.",
+                image: "images/begonia-seedlings.jpg"
+            },
+            {
+                id: "coleus-001",
+                name: "Coleus Seedlings",
+                category: "flowers",
+                description: "Colorful coleus with vibrant foliage. Perfect for shade gardens and containers.",
+                image: "images/coleus-seedlings.jpg"
+            },
+            {
+                id: "caladium-001",
+                name: "Caladium Seedlings",
+                category: "flowers",
+                description: "Heart-shaped caladium leaves in pink, red, and white. Perfect for shade gardens.",
+                image: "images/caladium-seedlings.jpg"
+            },
+            {
+                id: "croton-001",
+                name: "Croton Seedlings",
+                category: "flowers",
+                description: "Colorful croton plants with variegated leaves. Perfect for tropical landscaping.",
+                image: "images/croton-seedlings.jpg"
+            },
+            {
+                id: "poinsettia-001",
+                name: "Poinsettia Seedlings",
+                category: "flowers",
+                description: "Festive poinsettias with red, pink, and white bracts. Perfect for holiday decorations.",
+                image: "images/poinsettia-seedlings.jpg"
+            },
+            {
+                id: "azalea-001",
+                name: "Azalea Seedlings",
+                category: "flowers",
+                description: "Beautiful azaleas with abundant spring blooms. Perfect for acidic soil gardens.",
+                image: "images/azalea-seedlings.jpg"
+            },
+            {
+                id: "rhododendron-001",
+                name: "Rhododendron Seedlings",
+                category: "flowers",
+                description: "Spectacular rhododendrons with large flower clusters. Perfect for highland gardens.",
+                image: "images/rhododendron-seedlings.jpg"
+            },
+            {
+                id: "camellia-001",
+                name: "Camellia Seedlings",
+                category: "flowers",
+                description: "Elegant camellias with waxy blooms. Perfect for shade gardens and formal landscapes.",
+                image: "images/camellia-seedlings.jpg"
+            },
+            {
+                id: "gardenia-001",
+                name: "Gardenia Seedlings",
+                category: "flowers",
+                description: "Fragrant gardenias with creamy white blooms. Perfect for evening gardens and cut flowers.",
+                image: "images/gardenia-seedlings.jpg"
+            },
+            {
+                id: "magnolia-001",
+                name: "Magnolia Seedlings",
+                category: "flowers",
+                description: "Majestic magnolias with large, fragrant blooms. Perfect for specimen planting.",
+                image: "images/magnolia-seedlings.jpg"
+            },
+            {
+                id: "frangipani-001",
+                name: "Frangipani Seedlings",
+                category: "flowers",
+                description: "Fragrant frangipani flowers in white, pink, and yellow. Perfect for tropical gardens.",
+                image: "images/frangipani-seedlings.jpg"
+            },
+            {
+                id: "alamanda-001",
+                name: "Alamanda Seedlings",
+                category: "flowers",
+                description: "Bright yellow alamanda flowers. Fast-growing vine perfect for fences and trellises.",
+                image: "images/alamanda-seedlings.jpg"
+            },
+            {
+                id: "morning-glory-001",
+                name: "Morning Glory Seedlings",
+                category: "flowers",
+                description: "Climbing morning glory vines with trumpet-shaped flowers. Perfect for quick coverage.",
+                image: "images/morning-glory-seedlings.jpg"
+            },
+            {
+                id: "moonflower-001",
+                name: "Moonflower Seedlings",
+                category: "flowers",
+                description: "Night-blooming moonflowers with large white blooms. Perfect for evening gardens.",
+                image: "images/moonflower-seedlings.jpg"
+            },
+            {
+                id: "four-oclock-001",
+                name: "Four O'Clock Seedlings",
+                category: "flowers",
+                description: "Colorful four o'clock flowers that open in late afternoon. Easy to grow and fragrant.",
+                image: "images/four-oclock-seedlings.jpg"
+            },
+            {
+                id: "nasturtium-001",
+                name: "Nasturtium Seedlings",
+                category: "flowers",
+                description: "Edible nasturtiums with peppery leaves and colorful flowers. Perfect for companion planting.",
+                image: "images/nasturtium-seedlings.jpg"
+            },
+            {
+                id: "sweet-pea-001",
+                name: "Sweet Pea Seedlings",
+                category: "flowers",
+                description: "Fragrant sweet peas perfect for cutting. Climbing variety with delicate, colorful blooms.",
+                image: "images/sweet-pea-seedlings.jpg"
+            },
+            {
+                id: "snapdragon-001",
+                name: "Snapdragon Seedlings",
+                category: "flowers",
+                description: "Tall snapdragons perfect for cut flowers. Available in many colors with unique flower shape.",
+                image: "images/snapdragon-seedlings.jpg"
+            },
+            {
+                id: "salvia-001",
+                name: "Salvia Seedlings",
+                category: "flowers",
+                description: "Colorful salvia spikes perfect for borders. Attracts butterflies and hummingbirds.",
+                image: "images/salvia-seedlings.jpg"
+            },
+            {
+                id: "celosia-001",
+                name: "Celosia Seedlings",
+                category: "flowers",
+                description: "Unique celosia flowers in cockscomb and plume varieties. Perfect for dried flower arrangements.",
+                image: "images/celosia-seedlings.jpg"
+            },
+            {
+                id: "amaranthus-001",
+                name: "Amaranthus Seedlings",
+                category: "flowers",
+                description: "Dramatic amaranthus with cascading flower tails. Perfect for tall borders and cut flowers.",
+                image: "images/amaranthus-seedlings.jpg"
+            },
+            {
+                id: "gomphrena-001",
+                name: "Gomphrena Seedlings",
+                category: "flowers",
+                description: "Globe-shaped gomphrena flowers. Excellent for dried arrangements and continuous blooming.",
+                image: "images/gomphrena-seedlings.jpg"
+            },
+            {
+                id: "statice-001",
+                name: "Statice Seedlings",
+                category: "flowers",
+                description: "Papery statice flowers perfect for dried arrangements. Long-lasting and colorful.",
+                image: "images/statice-seedlings.jpg"
+            },
+            {
+                id: "strawflower-001",
+                name: "Strawflower Seedlings",
+                category: "flowers",
+                description: "Everlasting strawflowers perfect for dried bouquets. Papery texture and bright colors.",
+                image: "images/strawflower-seedlings.jpg"
+            }
+        ];
+
+        // State variables
+        let currentPage = 1;
+        let itemsPerPage = 12;
+        let filteredSeedlings = [...allSeedlings];
+        let currentCategory = 'all';
+        let currentSearch = '';
+
+        // Data handler for cart functionality
+        const dataHandler = {
+            onDataChanged(cartData) {
+                updateCartCount(cartData.length);
+            }
+        };
+
+        // Initialize page
+        async function initializePage() {
+            // Initialize AOS animations
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            // Initialize Data SDK
+            if (window.dataSdk) {
+                const initResult = await window.dataSdk.init(dataHandler);
+                if (!initResult.isOk) {
+                    console.error("Failed to initialize data SDK");
+                }
+            }
+
+            // Check URL parameters for category filter
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            if (categoryParam && ['fruits', 'flowers'].includes(categoryParam)) {
+                currentCategory = categoryParam;
+                updateActiveFilter(categoryParam);
+            }
+
+            // Set up event listeners
+            setupEventListeners();
+            
+            // Initial render
+            filterAndRenderProducts();
+            updateCartCountFromStorage();
+        }
+
+        // Set up event listeners
+        function setupEventListeners() {
+            // Search input
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('input', handleSearch);
+
+            // Category filters
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', handleCategoryFilter);
+            });
+
+            // Mobile menu
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            }
+        }
+
+        // Handle search
+        function handleSearch(event) {
+            currentSearch = event.target.value.toLowerCase();
+            currentPage = 1;
+            filterAndRenderProducts();
+        }
+
+        // Handle category filter
+        function handleCategoryFilter(event) {
+            const category = event.target.dataset.category;
+            currentCategory = category;
+            currentPage = 1;
+            
+            updateActiveFilter(category);
+            filterAndRenderProducts();
+        }
+
+        // Update active filter button
+        function updateActiveFilter(category) {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.category === category) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        // Filter and render products
+        function filterAndRenderProducts() {
+            // Apply filters
+            filteredSeedlings = allSeedlings.filter(seedling => {
+                const matchesCategory = currentCategory === 'all' || seedling.category === currentCategory;
+                const matchesSearch = currentSearch === '' || 
+                    seedling.name.toLowerCase().includes(currentSearch) ||
+                    seedling.description.toLowerCase().includes(currentSearch);
+                
+                return matchesCategory && matchesSearch;
+            });
+
+            // Update results count
+            updateResultsCount();
+
+            // Render products
+            renderProducts();
+
+            // Render pagination
+            renderPagination();
+        }
+
+        // Update results count
+        function updateResultsCount() {
+            const resultsCount = document.getElementById('results-count');
+            const total = filteredSeedlings.length;
+            const start = (currentPage - 1) * itemsPerPage + 1;
+            const end = Math.min(currentPage * itemsPerPage, total);
+
+            if (total === 0) {
+                resultsCount.textContent = 'No results found';
+            } else {
+                resultsCount.textContent = `Showing ${start}-${end} of ${total} seedlings`;
+            }
+        }
+
+        // Render products
+        function renderProducts() {
+            const productsGrid = document.getElementById('products-grid');
+            const noResults = document.getElementById('no-results');
+
+            if (filteredSeedlings.length === 0) {
+                productsGrid.style.display = 'none';
+                noResults.style.display = 'block';
+                return;
+            }
+
+            productsGrid.style.display = 'grid';
+            noResults.style.display = 'none';
+
+            // Calculate pagination
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const pageProducts = filteredSeedlings.slice(startIndex, endIndex);
+
+            // Render products
+            productsGrid.innerHTML = pageProducts.map(product => `
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\\'fas fa-${product.category === 'fruits' ? 'apple-alt' : 'flower'}\\'></i>';">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category === 'fruits' ? 'Fruit' : 'Flower'} Seedling</div>
+                        <h3>${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-actions">
+                            <a href="https://wa.me/254720019555?text=Hello%20Nature%20World!%20I'm%20interested%20in%20your%20${encodeURIComponent(product.name)}." 
+                               class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="tel:+254720019555" class="btn btn-call">
+                                <i class="fas fa-phone"></i> Call
+                            </a>
+                            <button onclick="addToCart('${product.id}')" class="btn btn-cart">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Reinitialize AOS for new elements
+            AOS.refresh();
+        }
+
+        // Render pagination
+        function renderPagination() {
+            const pagination = document.getElementById('pagination');
+            const totalPages = Math.ceil(filteredSeedlings.length / itemsPerPage);
+
+            if (totalPages <= 1) {
+                pagination.innerHTML = '';
+                return;
+            }
+
+            let paginationHTML = '';
+
+            // Previous button
+            paginationHTML += `
+                <button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+            `;
+
+            // Page numbers
+            const startPage = Math.max(1, currentPage - 2);
+            const endPage = Math.min(totalPages, currentPage + 2);
+
+            if (startPage > 1) {
+                paginationHTML += `<button onclick="changePage(1)">1</button>`;
+                if (startPage > 2) {
+                    paginationHTML += `<span>...</span>`;
+                }
+            }
+
+            for (let i = startPage; i <= endPage; i++) {
+                paginationHTML += `
+                    <button onclick="changePage(${i})" ${i === currentPage ? 'class="active"' : ''}>
+                        ${i}
+                    </button>
+                `;
+            }
+
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) {
+                    paginationHTML += `<span>...</span>`;
+                }
+                paginationHTML += `<button onclick="changePage(${totalPages})">${totalPages}</button>`;
+            }
+
+            // Next button
+            paginationHTML += `
+                <button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            `;
+
+            pagination.innerHTML = paginationHTML;
+        }
+
+        // Change page
+        function changePage(page) {
+            const totalPages = Math.ceil(filteredSeedlings.length / itemsPerPage);
+            if (page < 1 || page > totalPages) return;
+
+            currentPage = page;
+            renderProducts();
+            renderPagination();
+            updateResultsCount();
+
+            // Scroll to top of products section
+            document.querySelector('.products-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // Add to cart function
+        async function addToCart(productId) {
+            const product = allSeedlings.find(p => p.id === productId);
+            if (!product) return;
+
+            const button = event.target;
+            const originalText = button.innerHTML;
+            
+            // Show loading state
+            button.classList.add('loading');
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Adding...';
+            button.disabled = true;
+
+            try {
+                if (window.dataSdk) {
+                    const cartItem = {
+                        id: product.id,
+                        name: product.name,
+                        category: product.category,
+                        description: product.description,
+                        image: product.image,
+                        addedAt: new Date().toISOString()
+                    };
+
+                    const result = await window.dataSdk.create(cartItem);
+                    
+                    if (result.isOk) {
+                        // Show success feedback
+                        button.innerHTML = '<i class="fas fa-check"></i> Added!';
+                        button.style.background = '#4CAF50';
+                        
+                        setTimeout(() => {
+                            button.innerHTML = originalText;
+                            button.style.background = '';
+                            button.classList.remove('loading');
+                            button.disabled = false;
+                        }, 2000);
+                    } else {
+                        throw new Error('Failed to add to cart');
+                    }
+                } else {
+                    // Fallback to localStorage if SDK not available
+                    const cart = JSON.parse(localStorage.getItem('natureWorldCart') || '[]');
+                    const existingItem = cart.find(item => item.id === product.id);
+                    
+                    if (!existingItem) {
+                        cart.push({
+                            id: product.id,
+                            name: product.name,
+                            category: product.category,
+                            description: product.description,
+                            image: product.image,
+                            addedAt: new Date().toISOString()
+                        });
+                        localStorage.setItem('natureWorldCart', JSON.stringify(cart));
+                        updateCartCount(cart.length);
+                    }
+                    
+                    button.innerHTML = '<i class="fas fa-check"></i> Added!';
+                    button.style.background = '#4CAF50';
+                    
+                    setTimeout(() => {
+                        button.innerHTML = originalText;
+                        button.style.background = '';
+                        button.classList.remove('loading');
+                        button.disabled = false;
+                    }, 2000);
+                }
+            } catch (error) {
+                // Show error feedback
+                button.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error';
+                button.style.background = '#f44336';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                    button.classList.remove('loading');
+                    button.disabled = false;
+                }, 2000);
+            }
+        }
+
+        // Update cart count
+        function updateCartCount(count) {
+            const cartCountElement = document.getElementById('cart-count');
+            if (cartCountElement) {
+                cartCountElement.textContent = count;
+            }
+        }
+
+        // Update cart count from localStorage on page load
+        function updateCartCountFromStorage() {
+            if (!window.dataSdk) {
+                const cart = JSON.parse(localStorage.getItem('natureWorldCart') || '[]');
+                updateCartCount(cart.length);
+            }
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Initialize page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'999f93d987c73f24',t:'MTc2MjM3OTUzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
