@@ -1,0 +1,1485 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educational Videos | Nature World Fruits Seedlings | Growing Tips &amp; Guides | Makuyu, Kenya</title>
+  <meta name="description" content="Watch our educational videos on growing fruits and flowers. Expert tips on planting, care, harvesting, and more. Learn from our experienced team in Makuyu, Kenya.">
+  <meta name="keywords" content="seedling videos Kenya, growing tips, planting guides, fruit growing videos, flower care videos, Makuyu farming, agricultural education"><!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico"><!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><!-- Element SDK -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #FFA726;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #FFA726;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(76, 175, 80, 0.9)), url('images/videos-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            margin-top: 70px;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .page-header p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .video-stats {
+            background: #FF9800;
+            color: white;
+            padding: 0.8rem 2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+        }
+
+        /* Filters Section */
+        .filters-section {
+            background: #F8F9FA;
+            padding: 2rem;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        .filters-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 2px solid #E0E0E0;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+
+        .category-filters {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #4CAF50;
+            background: white;
+            color: #4CAF50;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .results-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 500;
+            color: #666;
+        }
+
+        /* Videos Section */
+        .videos-section {
+            padding: 3rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(45deg, #1a1a1a, #333);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .video-thumbnail::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #2E7D32, #4CAF50);
+            opacity: 0.8;
+        }
+
+        .play-button {
+            position: relative;
+            z-index: 2;
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #2E7D32;
+            transition: all 0.3s ease;
+        }
+
+        .video-thumbnail:hover .play-button {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .video-duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            z-index: 3;
+        }
+
+        .video-info {
+            padding: 1.5rem;
+        }
+
+        .video-category {
+            background: #E8F5E8;
+            color: #2E7D32;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+
+        .video-info h3 {
+            font-size: 1.3rem;
+            color: #2E7D32;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .video-description {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .video-views {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .video-date {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .video-actions {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.6rem 1rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
+            min-width: 140px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .btn-play {
+            background: #2196F3;
+            color: white;
+        }
+
+        .btn-play:hover {
+            background: #1976D2;
+            transform: translateY(-1px);
+        }
+
+        .btn-seedling {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-seedling:hover {
+            background: #388E3C;
+            transform: translateY(-1px);
+        }
+
+        /* No Results */
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #666;
+        }
+
+        .no-results i {
+            font-size: 4rem;
+            color: #E0E0E0;
+            margin-bottom: 1rem;
+        }
+
+        .no-results h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        /* Video Modal */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            padding: 2rem;
+        }
+
+        .video-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90%;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: #333;
+        }
+
+        .modal-video {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(45deg, #2E7D32, #4CAF50);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            color: #2E7D32;
+            margin-bottom: 1rem;
+        }
+
+        .modal-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1B5E20;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #E8F5E8;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: #FFA726;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #2E7D32;
+            color: #A5D6A7;
+        }
+
+        /* Floating WhatsApp */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .page-header p {
+                font-size: 1.1rem;
+            }
+
+            .filters-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-box {
+                min-width: auto;
+            }
+
+            .category-filters {
+                justify-content: center;
+            }
+
+            .results-info {
+                justify-content: center;
+            }
+
+            .videos-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .video-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                min-width: auto;
+            }
+
+            .video-modal {
+                padding: 1rem;
+            }
+
+            .modal-content {
+                padding: 1.5rem;
+            }
+
+            .modal-video {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .page-header {
+                padding: 6rem 1rem 3rem;
+            }
+
+            .filters-section {
+                padding: 1.5rem 1rem;
+            }
+
+            .videos-section {
+                padding: 2rem 1rem;
+            }
+
+            .filter-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Header -->
+  <header class="header">
+   <nav class="nav-container">
+    <div class="logo"><i class="fas fa-seedling"></i> <span>Nature World</span>
+    </div>
+    <ul class="nav-menu">
+     <li><a href="index.html">Home</a></li>
+     <li><a href="seedlings.html">All Seedlings</a></li>
+     <li><a href="videos.html" class="active">Videos</a></li>
+     <li><a href="about.html">About</a></li>
+     <li><a href="contact.html">Contact</a></li>
+     <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+    <div class="social-links"><a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook"></i> </a> <a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> </a>
+    </div><button class="mobile-menu-btn"> <i class="fas fa-bars"></i> </button>
+   </nav>
+  </header><!-- Page Header -->
+  <section class="page-header">
+   <div data-aos="fade-up">
+    <div class="video-stats"><i class="fas fa-play-circle"></i> 50+ Educational Videos Available
+    </div>
+    <h1>Educational Videos</h1>
+    <p>Learn from our experts with comprehensive video guides on growing, planting, and caring for your seedlings</p>
+   </div>
+  </section><!-- Filters Section -->
+  <section class="filters-section">
+   <div class="filters-container">
+    <div class="search-box"><i class="fas fa-search search-icon"></i> <input type="text" class="search-input" placeholder="Search videos..." id="search-input">
+    </div>
+    <div class="category-filters"><button class="filter-btn active" data-category="all">All Videos</button> <button class="filter-btn" data-category="fruits">Fruit Growing</button> <button class="filter-btn" data-category="flowers">Flower Care</button> <button class="filter-btn" data-category="planting">Planting Tips</button> <button class="filter-btn" data-category="harvesting">Harvesting</button> <button class="filter-btn" data-category="care">General Care</button>
+    </div>
+    <div class="results-info"><span id="results-count">Loading...</span> <i class="fas fa-video"></i>
+    </div>
+   </div>
+  </section><!-- Videos Section -->
+  <section class="videos-section">
+   <div class="videos-grid" id="videos-grid"><!-- Videos will be loaded here -->
+   </div><!-- No Results Message -->
+   <div class="no-results" id="no-results" style="display: none;"><i class="fas fa-video-slash"></i>
+    <h3>No videos found</h3>
+    <p>Try adjusting your search terms or category filter</p>
+   </div>
+  </section><!-- Video Modal -->
+  <div class="video-modal" id="video-modal">
+   <div class="modal-content"><button class="modal-close" onclick="closeVideoModal()"> <i class="fas fa-times"></i> </button>
+    <div class="modal-video"><i class="fas fa-play-circle" style="font-size: 3rem; margin-right: 1rem;"></i> Video Player Coming Soon
+    </div>
+    <h2 class="modal-title" id="modal-title"></h2>
+    <p class="modal-description" id="modal-description"></p>
+    <div class="video-actions"><a href="#" class="btn btn-seedling" id="modal-seedling-btn"> <i class="fab fa-whatsapp"></i> Buy Related Seedling </a>
+    </div>
+   </div>
+  </div><!-- Footer -->
+  <footer class="footer">
+   <div class="footer-content">
+    <div class="footer-section">
+     <h3>Nature World Fruits Seedlings</h3>
+     <p><i class="fas fa-map-marker-alt"></i> A2, Makuyu, Kenya</p>
+     <p><i class="fas fa-phone"></i> +254 720 019555</p>
+     <p><i class="fas fa-envelope"></i> josephkinyuti5@gmail.com</p>
+    </div>
+    <div class="footer-section">
+     <h3>Quick Links</h3><a href="index.html">Home</a> <a href="seedlings.html">All Seedlings</a> <a href="videos.html">Videos</a> <a href="about.html">About Us</a> <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-section">
+     <h3>Video Categories</h3><a href="videos.html?category=fruits">Fruit Growing</a> <a href="videos.html?category=flowers">Flower Care</a> <a href="videos.html?category=planting">Planting Tips</a> <a href="videos.html?category=harvesting">Harvesting</a> <a href="videos.html?category=care">General Care</a>
+    </div>
+    <div class="footer-section">
+     <h3>Follow Us</h3><a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook"></i> Facebook </a> <a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> Instagram </a>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>© 2024 Nature World Fruits Seedlings. All rights reserved. | Makuyu, Kenya</p>
+   </div>
+  </footer><!-- Floating WhatsApp Button --> <a href="https://wa.me/254720019555?text=Hello%20Nature%20World!%20I'm%20interested%20in%20your%20educational%20videos%20and%20seedlings." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp"> <i class="fab fa-whatsapp"></i> </a> <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+        // Complete videos database (50 videos)
+        const allVideos = [
+            // FRUIT GROWING VIDEOS (15 videos)
+            {
+                id: "video-001",
+                title: "How to Plant Mango Seedlings for Maximum Growth",
+                category: "fruits",
+                description: "Learn the proper techniques for planting mango seedlings, including soil preparation, spacing, and initial care for healthy growth.",
+                duration: "8:45",
+                views: 15420,
+                uploadDate: "2024-01-15",
+                relatedSeedling: "Premium Mango Seedlings"
+            },
+            {
+                id: "video-002",
+                title: "Avocado Growing Secrets: From Seedling to Harvest",
+                category: "fruits",
+                description: "Complete guide to growing Hass avocados in Kenya, covering planting, watering, fertilizing, and pest management.",
+                duration: "12:30",
+                views: 22150,
+                uploadDate: "2024-01-20",
+                relatedSeedling: "Hass Avocado Seedlings"
+            },
+            {
+                id: "video-003",
+                title: "Citrus Care: Growing Oranges and Lemons Successfully",
+                category: "fruits",
+                description: "Expert tips on growing citrus fruits including oranges, lemons, and limes. Learn about pruning, fertilizing, and disease prevention.",
+                duration: "10:15",
+                views: 18750,
+                uploadDate: "2024-01-25",
+                relatedSeedling: "Sweet Orange Seedlings"
+            },
+            {
+                id: "video-004",
+                title: "Passion Fruit Farming: Quick Returns in 12 Months",
+                category: "fruits",
+                description: "Fast-track your passion fruit farming with our proven methods. From planting to harvesting in just one year.",
+                duration: "9:20",
+                views: 31200,
+                uploadDate: "2024-02-01",
+                relatedSeedling: "Passion Fruit Seedlings"
+            },
+            {
+                id: "video-005",
+                title: "Strawberry Cultivation in Containers and Gardens",
+                category: "fruits",
+                description: "Perfect for small spaces! Learn how to grow sweet strawberries in containers, raised beds, and traditional gardens.",
+                duration: "7:35",
+                views: 14680,
+                uploadDate: "2024-02-05",
+                relatedSeedling: "Strawberry Seedlings"
+            },
+            {
+                id: "video-006",
+                title: "Papaya Growing Guide: Fast Growth, Quick Harvest",
+                category: "fruits",
+                description: "Maximize your papaya yield with proper planting techniques, gender identification, and optimal care practices.",
+                duration: "11:45",
+                views: 19850,
+                uploadDate: "2024-02-10",
+                relatedSeedling: "Papaya Seedlings"
+            },
+            {
+                id: "video-007",
+                title: "Guava Farming: High Vitamin C, High Profits",
+                category: "fruits",
+                description: "Learn to grow nutritious guavas with our comprehensive guide covering varieties, planting, and market preparation.",
+                duration: "8:55",
+                views: 12340,
+                uploadDate: "2024-02-15",
+                relatedSeedling: "Guava Seedlings"
+            },
+            {
+                id: "video-008",
+                title: "Banana Plantation Management for Maximum Yield",
+                category: "fruits",
+                description: "Professional banana farming techniques including sucker management, fertilization schedules, and harvest timing.",
+                duration: "13:20",
+                views: 25670,
+                uploadDate: "2024-02-20",
+                relatedSeedling: "Banana Seedlings"
+            },
+            {
+                id: "video-009",
+                title: "Tropical Fruit Mix: Pineapple, Coconut & More",
+                category: "fruits",
+                description: "Diversify your farm with tropical fruits. Learn about pineapple, coconut, and other exotic fruit cultivation.",
+                duration: "15:10",
+                views: 17890,
+                uploadDate: "2024-02-25",
+                relatedSeedling: "Pineapple Seedlings"
+            },
+            {
+                id: "video-010",
+                title: "Nut Trees: Macadamia and Cashew Growing Guide",
+                category: "fruits",
+                description: "Long-term investment in nut trees. Learn about macadamia and cashew cultivation for sustainable income.",
+                duration: "14:25",
+                views: 21450,
+                uploadDate: "2024-03-01",
+                relatedSeedling: "Macadamia Seedlings"
+            },
+            {
+                id: "video-011",
+                title: "Stone Fruits in Kenya: Peaches, Plums & Apricots",
+                category: "fruits",
+                description: "Highland fruit farming with stone fruits. Perfect for cooler regions of Kenya with proper variety selection.",
+                duration: "10:40",
+                views: 13250,
+                uploadDate: "2024-03-05",
+                relatedSeedling: "Peach Seedlings"
+            },
+            {
+                id: "video-012",
+                title: "Grape Cultivation: Table Grapes for Local Market",
+                category: "fruits",
+                description: "Start your grape farming venture with table grape varieties suitable for Kenyan conditions and local markets.",
+                duration: "12:15",
+                views: 16780,
+                uploadDate: "2024-03-10",
+                relatedSeedling: "Grape Seedlings"
+            },
+            {
+                id: "video-013",
+                title: "Exotic Fruits: Dragon Fruit and Star Fruit Growing",
+                category: "fruits",
+                description: "Enter the exotic fruit market with dragon fruit and star fruit. High-value crops with growing demand.",
+                duration: "11:30",
+                views: 19240,
+                uploadDate: "2024-03-15",
+                relatedSeedling: "Dragon Fruit Seedlings"
+            },
+            {
+                id: "video-014",
+                title: "Medicinal Fruits: Moringa and Neem Cultivation",
+                category: "fruits",
+                description: "Grow medicinal plants for health and income. Learn about moringa and neem tree cultivation and uses.",
+                duration: "9:45",
+                views: 14560,
+                uploadDate: "2024-03-20",
+                relatedSeedling: "Moringa Seedlings"
+            },
+            {
+                id: "video-015",
+                title: "Spice Farming: Vanilla, Cardamom & Black Pepper",
+                category: "fruits",
+                description: "High-value spice crops for specialized farming. Learn about vanilla, cardamom, and black pepper cultivation.",
+                duration: "16:20",
+                views: 22890,
+                uploadDate: "2024-03-25",
+                relatedSeedling: "Vanilla Seedlings"
+            },
+
+            // FLOWER CARE VIDEOS (15 videos)
+            {
+                id: "video-016",
+                title: "Rose Garden Mastery: Planting and Care Guide",
+                category: "flowers",
+                description: "Create stunning rose gardens with our comprehensive guide covering varieties, planting, pruning, and disease management.",
+                duration: "11:25",
+                views: 28340,
+                uploadDate: "2024-01-18",
+                relatedSeedling: "Premium Rose Seedlings"
+            },
+            {
+                id: "video-017",
+                title: "Sunflower Farming: Giant Blooms and Bird Feed",
+                category: "flowers",
+                description: "Grow impressive sunflowers for decoration and bird feed production. Learn about varieties and optimal growing conditions.",
+                duration: "8:30",
+                views: 16750,
+                uploadDate: "2024-01-22",
+                relatedSeedling: "Giant Sunflower Seedlings"
+            },
+            {
+                id: "video-018",
+                title: "Marigold Magic: Natural Pest Control Flowers",
+                category: "flowers",
+                description: "Use marigolds for beautiful gardens and natural pest control. Perfect companion plants for vegetable gardens.",
+                duration: "7:15",
+                views: 13420,
+                uploadDate: "2024-01-28",
+                relatedSeedling: "Marigold Seedlings"
+            },
+            {
+                id: "video-019",
+                title: "Tropical Hibiscus: Year-Round Blooming Beauty",
+                category: "flowers",
+                description: "Maintain beautiful hibiscus plants with continuous blooms. Learn about varieties, care, and propagation techniques.",
+                duration: "9:50",
+                views: 21680,
+                uploadDate: "2024-02-03",
+                relatedSeedling: "Hibiscus Seedlings"
+            },
+            {
+                id: "video-020",
+                title: "Bougainvillea Hedges: Colorful Privacy Screens",
+                category: "flowers",
+                description: "Create stunning privacy hedges with bougainvillea. Learn about planting, training, and maintenance for best results.",
+                duration: "10:35",
+                views: 18920,
+                uploadDate: "2024-02-08",
+                relatedSeedling: "Bougainvillea Seedlings"
+            },
+            {
+                id: "video-021",
+                title: "Fragrant Gardens: Jasmine and Gardenia Care",
+                category: "flowers",
+                description: "Fill your garden with fragrance using jasmine and gardenia. Evening garden planning and care tips included.",
+                duration: "12:10",
+                views: 15670,
+                uploadDate: "2024-02-12",
+                relatedSeedling: "Jasmine Seedlings"
+            },
+            {
+                id: "video-022",
+                title: "Lavender Cultivation: Aromatherapy in Your Garden",
+                category: "flowers",
+                description: "Grow calming lavender for aromatherapy and crafts. Learn about varieties suitable for Kenyan highland conditions.",
+                duration: "8:45",
+                views: 19450,
+                uploadDate: "2024-02-18",
+                relatedSeedling: "Lavender Seedlings"
+            },
+            {
+                id: "video-023",
+                title: "Container Flower Gardening: Petunias and More",
+                category: "flowers",
+                description: "Perfect for small spaces! Create beautiful container gardens with petunias, begonias, and other flowering plants.",
+                duration: "9:25",
+                views: 14230,
+                uploadDate: "2024-02-22",
+                relatedSeedling: "Petunia Seedlings"
+            },
+            {
+                id: "video-024",
+                title: "Cut Flower Production: Zinnias and Cosmos",
+                category: "flowers",
+                description: "Start your cut flower business with easy-to-grow zinnias and cosmos. Market preparation and post-harvest care.",
+                duration: "11:15",
+                views: 17840,
+                uploadDate: "2024-02-28",
+                relatedSeedling: "Zinnia Seedlings"
+            },
+            {
+                id: "video-025",
+                title: "Dahlia Spectacular: Large Blooms for Shows",
+                category: "flowers",
+                description: "Grow prize-winning dahlias with our expert techniques. Variety selection, staking, and exhibition preparation.",
+                duration: "13:40",
+                views: 12890,
+                uploadDate: "2024-03-03",
+                relatedSeedling: "Dahlia Seedlings"
+            },
+            {
+                id: "video-026",
+                title: "Seasonal Flowers: Chrysanthemums and Carnations",
+                category: "flowers",
+                description: "Plan your flower garden for year-round color with seasonal blooming chrysanthemums and carnations.",
+                duration: "10:20",
+                views: 16540,
+                uploadDate: "2024-03-08",
+                relatedSeedling: "Chrysanthemum Seedlings"
+            },
+            {
+                id: "video-027",
+                title: "Bulb Flowers: Lilies, Tulips, and Daffodils",
+                category: "flowers",
+                description: "Master bulb flower cultivation with proper planting depths, timing, and care for spectacular spring displays.",
+                duration: "12:55",
+                views: 20150,
+                uploadDate: "2024-03-12",
+                relatedSeedling: "Lily Seedlings"
+            },
+            {
+                id: "video-028",
+                title: "Exotic Orchids: Indoor and Greenhouse Growing",
+                category: "flowers",
+                description: "Enter the world of exotic orchids with proper care techniques for indoor and greenhouse cultivation.",
+                duration: "14:30",
+                views: 23670,
+                uploadDate: "2024-03-18",
+                relatedSeedling: "Orchid Seedlings"
+            },
+            {
+                id: "video-029",
+                title: "Tropical Flowers: Bird of Paradise and Anthurium",
+                category: "flowers",
+                description: "Create tropical paradise with exotic flowers. Learn about bird of paradise and anthurium care and propagation.",
+                duration: "11:45",
+                views: 18320,
+                uploadDate: "2024-03-22",
+                relatedSeedling: "Bird of Paradise Seedlings"
+            },
+            {
+                id: "video-030",
+                title: "Foliage Plants: Coleus, Caladium, and Croton",
+                category: "flowers",
+                description: "Add color with foliage plants. Learn about coleus, caladium, and croton cultivation for shade gardens.",
+                duration: "9:35",
+                views: 15780,
+                uploadDate: "2024-03-28",
+                relatedSeedling: "Coleus Seedlings"
+            },
+
+            // PLANTING TIPS VIDEOS (10 videos)
+            {
+                id: "video-031",
+                title: "Soil Preparation Secrets for Healthy Seedlings",
+                category: "planting",
+                description: "Master soil preparation techniques for optimal seedling growth. Learn about pH, nutrients, and soil structure.",
+                duration: "10:45",
+                views: 32150,
+                uploadDate: "2024-01-12",
+                relatedSeedling: "Premium Mango Seedlings"
+            },
+            {
+                id: "video-032",
+                title: "Transplanting Techniques: From Nursery to Garden",
+                category: "planting",
+                description: "Ensure successful transplanting with proper techniques to minimize shock and maximize survival rates.",
+                duration: "8:20",
+                views: 24680,
+                uploadDate: "2024-01-30",
+                relatedSeedling: "Rose Seedlings"
+            },
+            {
+                id: "video-033",
+                title: "Spacing and Layout: Maximizing Garden Productivity",
+                category: "planting",
+                description: "Optimize your garden layout with proper spacing techniques for maximum yield and healthy plant growth.",
+                duration: "9:15",
+                views: 19340,
+                uploadDate: "2024-02-14",
+                relatedSeedling: "Avocado Seedlings"
+            },
+            {
+                id: "video-034",
+                title: "Companion Planting: Natural Pest Control Methods",
+                category: "planting",
+                description: "Use companion planting to naturally control pests and improve soil health. Learn beneficial plant combinations.",
+                duration: "11:30",
+                views: 27890,
+                uploadDate: "2024-02-26",
+                relatedSeedling: "Marigold Seedlings"
+            },
+            {
+                id: "video-035",
+                title: "Mulching Mastery: Moisture and Weed Control",
+                category: "planting",
+                description: "Learn proper mulching techniques to conserve moisture, suppress weeds, and improve soil health.",
+                duration: "7:50",
+                views: 16720,
+                uploadDate: "2024-03-06",
+                relatedSeedling: "Strawberry Seedlings"
+            },
+            {
+                id: "video-036",
+                title: "Staking and Support Systems for Young Plants",
+                category: "planting",
+                description: "Provide proper support for young plants with effective staking and support systems for healthy growth.",
+                duration: "8:35",
+                views: 14560,
+                uploadDate: "2024-03-14",
+                relatedSeedling: "Passion Fruit Seedlings"
+            },
+            {
+                id: "video-037",
+                title: "Seasonal Planting Calendar for Kenya",
+                category: "planting",
+                description: "Plan your planting schedule with our comprehensive seasonal calendar optimized for Kenyan climate conditions.",
+                duration: "12:20",
+                views: 29450,
+                uploadDate: "2024-03-26",
+                relatedSeedling: "Sunflower Seedlings"
+            },
+            {
+                id: "video-038",
+                title: "Container Gardening: Choosing the Right Pots",
+                category: "planting",
+                description: "Master container gardening with proper pot selection, drainage, and growing medium for healthy plants.",
+                duration: "9:40",
+                views: 18670,
+                uploadDate: "2024-04-02",
+                relatedSeedling: "Petunia Seedlings"
+            },
+            {
+                id: "video-039",
+                title: "Greenhouse Setup for Year-Round Growing",
+                category: "planting",
+                description: "Set up your greenhouse for optimal growing conditions. Learn about ventilation, heating, and humidity control.",
+                duration: "15:25",
+                views: 22340,
+                uploadDate: "2024-04-08",
+                relatedSeedling: "Orchid Seedlings"
+            },
+            {
+                id: "video-040",
+                title: "Raised Bed Construction and Benefits",
+                category: "planting",
+                description: "Build effective raised beds for improved drainage, soil control, and easier maintenance in your garden.",
+                duration: "10:55",
+                views: 20180,
+                uploadDate: "2024-04-15",
+                relatedSeedling: "Lettuce Seedlings"
+            },
+
+            // HARVESTING VIDEOS (5 videos)
+            {
+                id: "video-041",
+                title: "Perfect Timing: When to Harvest Your Fruits",
+                category: "harvesting",
+                description: "Learn to identify the perfect harvest time for maximum flavor, nutrition, and storage life of your fruits.",
+                duration: "11:15",
+                views: 25670,
+                uploadDate: "2024-02-16",
+                relatedSeedling: "Mango Seedlings"
+            },
+            {
+                id: "video-042",
+                title: "Post-Harvest Handling for Maximum Shelf Life",
+                category: "harvesting",
+                description: "Proper post-harvest techniques to extend shelf life and maintain quality for better market prices.",
+                duration: "9:45",
+                views: 18920,
+                uploadDate: "2024-03-04",
+                relatedSeedling: "Avocado Seedlings"
+            },
+            {
+                id: "video-043",
+                title: "Cut Flower Harvesting and Conditioning",
+                category: "harvesting",
+                description: "Maximize vase life of cut flowers with proper harvesting time and conditioning techniques.",
+                duration: "8:30",
+                views: 14230,
+                uploadDate: "2024-03-16",
+                relatedSeedling: "Rose Seedlings"
+            },
+            {
+                id: "video-044",
+                title: "Seed Collection and Storage for Next Season",
+                category: "harvesting",
+                description: "Save money by collecting and properly storing seeds from your best plants for next season's planting.",
+                duration: "10:20",
+                views: 16540,
+                uploadDate: "2024-03-30",
+                relatedSeedling: "Zinnia Seedlings"
+            },
+            {
+                id: "video-045",
+                title: "Market Preparation: Packaging and Presentation",
+                category: "harvesting",
+                description: "Prepare your harvest for market with proper packaging, grading, and presentation for maximum profits.",
+                duration: "12:40",
+                views: 21890,
+                uploadDate: "2024-04-12",
+                relatedSeedling: "Passion Fruit Seedlings"
+            },
+
+            // GENERAL CARE VIDEOS (5 videos)
+            {
+                id: "video-046",
+                title: "Watering Wisdom: When, How Much, and How Often",
+                category: "care",
+                description: "Master the art of watering with techniques for different plants, seasons, and growth stages.",
+                duration: "9:25",
+                views: 31450,
+                uploadDate: "2024-01-24",
+                relatedSeedling: "All Seedlings"
+            },
+            {
+                id: "video-047",
+                title: "Fertilizer Guide: Organic vs Chemical Options",
+                category: "care",
+                description: "Choose the right fertilizers for your plants with our comprehensive guide to organic and chemical options.",
+                duration: "13:15",
+                views: 26780,
+                uploadDate: "2024-02-07",
+                relatedSeedling: "All Seedlings"
+            },
+            {
+                id: "video-048",
+                title: "Pest and Disease Management: Prevention First",
+                category: "care",
+                description: "Prevent and manage common pests and diseases with integrated pest management techniques.",
+                duration: "14:50",
+                views: 28340,
+                uploadDate: "2024-02-21",
+                relatedSeedling: "All Seedlings"
+            },
+            {
+                id: "video-049",
+                title: "Pruning Techniques for Healthy Plant Growth",
+                category: "care",
+                description: "Learn proper pruning techniques to promote healthy growth, flowering, and fruit production.",
+                duration: "11:35",
+                views: 23560,
+                uploadDate: "2024-03-07",
+                relatedSeedling: "All Seedlings"
+            },
+            {
+                id: "video-050",
+                title: "Seasonal Care Calendar: Year-Round Plant Health",
+                category: "care",
+                description: "Maintain healthy plants year-round with our seasonal care calendar and monthly maintenance tasks.",
+                duration: "16:20",
+                views: 34120,
+                uploadDate: "2024-03-21",
+                relatedSeedling: "All Seedlings"
+            }
+        ];
+
+        // State variables
+        let filteredVideos = [...allVideos];
+        let currentCategory = 'all';
+        let currentSearch = '';
+
+        // Initialize page
+        function initializePage() {
+            // Initialize AOS animations
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            // Check URL parameters for category filter
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            if (categoryParam && ['fruits', 'flowers', 'planting', 'harvesting', 'care'].includes(categoryParam)) {
+                currentCategory = categoryParam;
+                updateActiveFilter(categoryParam);
+            }
+
+            // Set up event listeners
+            setupEventListeners();
+            
+            // Initial render
+            filterAndRenderVideos();
+            updateCartCountFromStorage();
+        }
+
+        // Set up event listeners
+        function setupEventListeners() {
+            // Search input
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('input', handleSearch);
+
+            // Category filters
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', handleCategoryFilter);
+            });
+
+            // Mobile menu
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            }
+
+            // Close modal on outside click
+            const videoModal = document.getElementById('video-modal');
+            videoModal.addEventListener('click', function(e) {
+                if (e.target === videoModal) {
+                    closeVideoModal();
+                }
+            });
+        }
+
+        // Handle search
+        function handleSearch(event) {
+            currentSearch = event.target.value.toLowerCase();
+            filterAndRenderVideos();
+        }
+
+        // Handle category filter
+        function handleCategoryFilter(event) {
+            const category = event.target.dataset.category;
+            currentCategory = category;
+            
+            updateActiveFilter(category);
+            filterAndRenderVideos();
+        }
+
+        // Update active filter button
+        function updateActiveFilter(category) {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.category === category) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        // Filter and render videos
+        function filterAndRenderVideos() {
+            // Apply filters
+            filteredVideos = allVideos.filter(video => {
+                const matchesCategory = currentCategory === 'all' || video.category === currentCategory;
+                const matchesSearch = currentSearch === '' || 
+                    video.title.toLowerCase().includes(currentSearch) ||
+                    video.description.toLowerCase().includes(currentSearch);
+                
+                return matchesCategory && matchesSearch;
+            });
+
+            // Update results count
+            updateResultsCount();
+
+            // Render videos
+            renderVideos();
+        }
+
+        // Update results count
+        function updateResultsCount() {
+            const resultsCount = document.getElementById('results-count');
+            const total = filteredVideos.length;
+
+            if (total === 0) {
+                resultsCount.textContent = 'No videos found';
+            } else {
+                resultsCount.textContent = `${total} video${total !== 1 ? 's' : ''} available`;
+            }
+        }
+
+        // Render videos
+        function renderVideos() {
+            const videosGrid = document.getElementById('videos-grid');
+            const noResults = document.getElementById('no-results');
+
+            if (filteredVideos.length === 0) {
+                videosGrid.style.display = 'none';
+                noResults.style.display = 'block';
+                return;
+            }
+
+            videosGrid.style.display = 'grid';
+            noResults.style.display = 'none';
+
+            // Render videos
+            videosGrid.innerHTML = filteredVideos.map(video => {
+                const categoryName = getCategoryName(video.category);
+                const uploadDate = formatDate(video.uploadDate);
+                const views = formatViews(video.views);
+
+                return `
+                    <div class="video-card" data-aos="fade-up">
+                        <div class="video-thumbnail" onclick="playVideo('${video.id}')">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-duration">${video.duration}</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-category">${categoryName}</div>
+                            <h3>${video.title}</h3>
+                            <p class="video-description">${video.description}</p>
+                            <div class="video-meta">
+                                <div class="video-views">
+                                    <i class="fas fa-eye"></i>
+                                    <span>${views} views</span>
+                                </div>
+                                <div class="video-date">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>${uploadDate}</span>
+                                </div>
+                            </div>
+                            <div class="video-actions">
+                                <button onclick="playVideo('${video.id}')" class="btn btn-play">
+                                    <i class="fas fa-play"></i> Watch Video
+                                </button>
+                                <a href="https://wa.me/254720019555?text=Hello%20Nature%20World!%20I%20watched%20your%20video%20'${encodeURIComponent(video.title)}'%20and%20I'm%20interested%20in%20${encodeURIComponent(video.relatedSeedling)}." 
+                                   class="btn btn-seedling" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-whatsapp"></i> Buy Related Seedling
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Reinitialize AOS for new elements
+            AOS.refresh();
+        }
+
+        // Get category display name
+        function getCategoryName(category) {
+            const categoryNames = {
+                'fruits': 'Fruit Growing',
+                'flowers': 'Flower Care',
+                'planting': 'Planting Tips',
+                'harvesting': 'Harvesting',
+                'care': 'General Care'
+            };
+            return categoryNames[category] || category;
+        }
+
+        // Format date
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'short', 
+                day: 'numeric' 
+            });
+        }
+
+        // Format view count
+        function formatViews(views) {
+            if (views >= 1000000) {
+                return (views / 1000000).toFixed(1) + 'M';
+            } else if (views >= 1000) {
+                return (views / 1000).toFixed(1) + 'K';
+            }
+            return views.toString();
+        }
+
+        // Play video (open modal)
+        function playVideo(videoId) {
+            const video = allVideos.find(v => v.id === videoId);
+            if (!video) return;
+
+            // Update view count
+            video.views += 1;
+
+            // Update modal content
+            document.getElementById('modal-title').textContent = video.title;
+            document.getElementById('modal-description').textContent = video.description;
+            
+            const seedlingBtn = document.getElementById('modal-seedling-btn');
+            seedlingBtn.href = `https://wa.me/254720019555?text=Hello%20Nature%20World!%20I%20watched%20your%20video%20'${encodeURIComponent(video.title)}'%20and%20I'm%20interested%20in%20${encodeURIComponent(video.relatedSeedling)}.`;
+
+            // Show modal
+            document.getElementById('video-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // Re-render to update view count
+            renderVideos();
+        }
+
+        // Close video modal
+        function closeVideoModal() {
+            document.getElementById('video-modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Update cart count from localStorage
+        function updateCartCountFromStorage() {
+            const cart = JSON.parse(localStorage.getItem('natureWorldCart') || '[]');
+            const cartCountElement = document.getElementById('cart-count');
+            if (cartCountElement) {
+                cartCountElement.textContent = cart.length;
+            }
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Initialize page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializePage);
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeVideoModal();
+            }
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'999fa30dc3b73f24',t:'MTc2MjM4MDE2My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
