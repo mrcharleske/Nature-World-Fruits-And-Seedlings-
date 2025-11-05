@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart | Nature World Fruits Seedlings | Makuyu, Kenya</title>
+  <meta name="description" content="Review your seedling selections and place your order with Nature World Fruits Seedlings. Quality seedlings delivered across Kenya.">
+  <meta name="keywords" content="shopping cart, order seedlings Kenya, Nature World cart, buy seedlings online, Makuyu nursery order"><!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico"><!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><!-- Data SDK -->
+  <script src="/_sdk/data_sdk.js"></script><!-- Element SDK -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #FFA726;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #FFA726;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem 3rem;
+            margin-top: 70px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Cart Container */
+        .cart-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* Cart Items */
+        .cart-items {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .cart-header h2 {
+            color: #2E7D32;
+            font-size: 1.8rem;
+        }
+
+        .clear-cart-btn {
+            background: #ff5722;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .clear-cart-btn:hover {
+            background: #d84315;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 80px 1fr auto auto auto;
+            gap: 1rem;
+            align-items: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 2px solid #e0e0e0;
+        }
+
+        .item-details h3 {
+            color: #2E7D32;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-details p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .item-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2E7D32;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .qty-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .qty-btn:hover {
+            background: #2E7D32;
+        }
+
+        .qty-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .quantity-display {
+            min-width: 40px;
+            text-align: center;
+            font-weight: bold;
+            color: #2E7D32;
+        }
+
+        .remove-btn {
+            background: #ff5722;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .remove-btn:hover {
+            background: #d84315;
+        }
+
+        /* Empty Cart */
+        .empty-cart {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+
+        .empty-cart i {
+            font-size: 4rem;
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+
+        .empty-cart h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2E7D32;
+        }
+
+        .continue-shopping-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .continue-shopping-btn:hover {
+            background: #2E7D32;
+        }
+
+        /* Cart Summary */
+        .cart-summary {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .summary-header {
+            color: #2E7D32;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .summary-row:last-child {
+            border-bottom: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #2E7D32;
+            border-top: 2px solid #4CAF50;
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+        .checkout-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .checkout-btn:hover {
+            background: #2E7D32;
+        }
+
+        .checkout-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .contact-info h4 {
+            color: #2E7D32;
+            margin-bottom: 1rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: #128C7E;
+        }
+
+        .phone-btn {
+            background: #2196F3;
+        }
+
+        .phone-btn:hover {
+            background: #1976D2;
+        }
+
+        /* Loading States */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin: -10px 0 0 -10px;
+            border: 2px solid #4CAF50;
+            border-top: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Footer */
+        .footer {
+            background: #1B5E20;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #E8F5E8;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: #FFA726;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #2E7D32;
+            color: #A5D6A7;
+        }
+
+        /* Floating WhatsApp */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #2E7D32;
+                flex-direction: column;
+                padding: 1rem 2rem;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                gap: 0;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                padding: 0.8rem 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .nav-menu li:last-child {
+                border-bottom: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .main-content {
+                padding: 2rem 1rem;
+            }
+
+            .cart-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .cart-items {
+                padding: 1.5rem;
+            }
+
+            .cart-item {
+                grid-template-columns: 60px 1fr;
+                gap: 1rem;
+            }
+
+            .item-price,
+            .quantity-controls,
+            .remove-btn {
+                grid-column: 1 / -1;
+                justify-self: start;
+                margin-top: 0.5rem;
+            }
+
+            .quantity-controls {
+                justify-self: center;
+            }
+
+            .remove-btn {
+                justify-self: end;
+            }
+
+            .contact-methods {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .page-header {
+                padding: 5rem 1rem 2rem;
+            }
+
+            .cart-items,
+            .cart-summary {
+                padding: 1rem;
+            }
+
+            .cart-header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+            }
+
+            .item-image {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Header -->
+  <header class="header">
+   <nav class="nav-container">
+    <div class="logo"><i class="fas fa-seedling"></i> <span>Nature World</span>
+    </div>
+    <ul class="nav-menu">
+     <li><a href="index.html">Home</a></li>
+     <li><a href="seedlings.html">All Seedlings</a></li>
+     <li><a href="videos.html">Videos</a></li>
+     <li><a href="about.html">About</a></li>
+     <li><a href="contact.html">Contact</a></li>
+     <li><a href="cart.html" class="active">Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+    <div class="social-links"><a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook"></i> </a> <a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> </a>
+    </div><button class="mobile-menu-btn"> <i class="fas fa-bars"></i> </button>
+   </nav>
+  </header><!-- Page Header -->
+  <section class="page-header">
+   <div data-aos="fade-up">
+    <h1>Your Shopping Cart</h1>
+    <p>Review your seedling selections and place your order</p>
+   </div>
+  </section><!-- Main Content -->
+  <main class="main-content">
+   <div class="cart-container"><!-- Cart Items -->
+    <div class="cart-items">
+     <div class="cart-header">
+      <h2>Cart Items (<span id="item-count">0</span>)</h2><button class="clear-cart-btn" id="clearCartBtn" style="display: none;"> <i class="fas fa-trash"></i> Clear Cart </button>
+     </div>
+     <div id="cartItemsContainer"><!-- Cart items will be populated here -->
+     </div>
+     <div class="empty-cart" id="emptyCartMessage"><i class="fas fa-shopping-cart"></i>
+      <h3>Your cart is empty</h3>
+      <p>Add some quality seedlings to get started!</p><a href="seedlings.html" class="continue-shopping-btn"> <i class="fas fa-seedling"></i> Browse Seedlings </a>
+     </div>
+    </div><!-- Cart Summary -->
+    <div class="cart-summary">
+     <h3 class="summary-header">Order Summary</h3>
+     <div class="summary-row"><span>Items (<span id="summary-count">0</span>):</span> <span id="subtotal">KSh 0</span>
+     </div>
+     <div class="summary-row"><span>Delivery:</span> <span id="delivery-cost">Free</span>
+     </div>
+     <div class="summary-row"><span>Total:</span> <span id="total-cost">KSh 0</span>
+     </div>
+     <div class="checkout-section"><button class="checkout-btn" id="checkoutBtn" disabled> <i class="fab fa-whatsapp"></i> Order via WhatsApp </button>
+      <div class="contact-info">
+       <h4>Need Help?</h4>
+       <div class="contact-methods"><a href="https://wa.me/254720019555?text=Hello%20Nature%20World!%20I%20need%20help%20with%20my%20cart." class="contact-btn" target="_blank" rel="noopener noreferrer"> <i class="fab fa-whatsapp"></i> WhatsApp </a> <a href="tel:+254720019555" class="contact-btn phone-btn"> <i class="fas fa-phone"></i> Call Us </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </main><!-- Footer -->
+  <footer class="footer">
+   <div class="footer-content">
+    <div class="footer-section">
+     <h3>Nature World Fruits Seedlings</h3>
+     <p><i class="fas fa-map-marker-alt"></i> A2, Makuyu, Kenya</p>
+     <p><i class="fas fa-phone"></i> +254 720 019555</p>
+     <p><i class="fas fa-envelope"></i> josephkinyuti5@gmail.com</p>
+     <p><i class="fas fa-clock"></i> Mon-Sat: 8AM-6PM, Sun: 9AM-4PM</p>
+    </div>
+    <div class="footer-section">
+     <h3>Quick Links</h3><a href="index.html">Home</a> <a href="seedlings.html">All Seedlings</a> <a href="videos.html">Videos</a> <a href="about.html">About Us</a> <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-section">
+     <h3>Contact Methods</h3><a href="tel:+254720019555">📞 Call Us</a> <a href="https://wa.me/254720019555" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a> <a href="mailto:josephkinyuti5@gmail.com">📧 Email</a> <a href="https://maps.google.com/?q=A2+Makuyu+Kenya" target="_blank" rel="noopener noreferrer">🗺️ Directions</a>
+    </div>
+    <div class="footer-section">
+     <h3>Follow Us</h3><a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-facebook"></i> Facebook </a> <a href="https://www.facebook.com/share/1CpNPwShDR/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> Instagram </a>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>© 2024 Nature World Fruits Seedlings. All rights reserved. | A2, Makuyu, Kenya</p>
+   </div>
+  </footer><!-- Floating WhatsApp Button --> <a href="https://wa.me/254720019555?text=Hello%20Nature%20World!%20I%20need%20assistance%20with%20my%20order." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp"> <i class="fab fa-whatsapp"></i> </a> <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+        // Global variables
+        let cartData = [];
+        let isLoading = false;
+
+        // Data handler for cart persistence
+        const cartDataHandler = {
+            onDataChanged(data) {
+                cartData = data || [];
+                updateCartDisplay();
+                updateCartCount();
+            }
+        };
+
+        // Initialize page
+        async function initializePage() {
+            // Initialize AOS animations
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            // Initialize Data SDK
+            if (window.dataSdk) {
+                const initResult = await window.dataSdk.init(cartDataHandler);
+                if (!initResult.isOk) {
+                    console.error('Failed to initialize cart data');
+                    // Fallback to localStorage
+                    loadCartFromLocalStorage();
+                }
+            } else {
+                // Fallback to localStorage if SDK not available
+                loadCartFromLocalStorage();
+            }
+
+            // Set up event listeners
+            setupEventListeners();
+        }
+
+        // Load cart from localStorage as fallback
+        function loadCartFromLocalStorage() {
+            const localCart = JSON.parse(localStorage.getItem('natureWorldCart') || '[]');
+            cartData = localCart;
+            updateCartDisplay();
+            updateCartCount();
+        }
+
+        // Set up event listeners
+        function setupEventListeners() {
+            // Mobile menu
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            }
+
+            // Clear cart button
+            const clearCartBtn = document.getElementById('clearCartBtn');
+            if (clearCartBtn) {
+                clearCartBtn.addEventListener('click', clearCart);
+            }
+
+            // Checkout button
+            const checkoutBtn = document.getElementById('checkoutBtn');
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('click', proceedToCheckout);
+            }
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Update cart display
+        function updateCartDisplay() {
+            const container = document.getElementById('cartItemsContainer');
+            const emptyMessage = document.getElementById('emptyCartMessage');
+            const clearBtn = document.getElementById('clearCartBtn');
+            const checkoutBtn = document.getElementById('checkoutBtn');
+
+            if (cartData.length === 0) {
+                container.innerHTML = '';
+                emptyMessage.style.display = 'block';
+                clearBtn.style.display = 'none';
+                checkoutBtn.disabled = true;
+            } else {
+                emptyMessage.style.display = 'none';
+                clearBtn.style.display = 'block';
+                checkoutBtn.disabled = false;
+                
+                container.innerHTML = cartData.map(item => createCartItemHTML(item)).join('');
+                
+                // Add event listeners to quantity and remove buttons
+                addCartItemEventListeners();
+            }
+
+            updateCartSummary();
+        }
+
+        // Create cart item HTML
+        function createCartItemHTML(item) {
+            return `
+                <div class="cart-item" data-item-id="${item.__backendId || item.id}">
+                    <img src="${item.image}" alt="${item.name}" class="item-image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjVGNUY1Ii8+CjxwYXRoIGQ9Ik00MCAyMEM0Ni42Mjc0IDIwIDUyIDI1LjM3MjYgNTIgMzJWNDhDNTIgNTQuNjI3NCA0Ni42Mjc0IDYwIDQwIDYwQzMzLjM3MjYgNjAgMjggNTQuNjI3NCAyOCA0OFYzMkMyOCAyNS4zNzI2IDMzLjM3MjYgMjAgNDAgMjBaIiBmaWxsPSIjNENBRjUwIi8+CjxwYXRoIGQ9Ik0zNiAzNkgzMlYzMkg0OFYzNkg0NFY0MEg0OFY0NEgzNlYzNloiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo='; this.alt='Seedling image';">
+                    <div class="item-details">
+                        <h3>${item.name}</h3>
+                        <p>${item.category || 'Seedling'}</p>
+                    </div>
+                    <div class="item-price">KSh ${item.price.toLocaleString()}</div>
+                    <div class="quantity-controls">
+                        <button class="qty-btn decrease-btn" data-item-id="${item.__backendId || item.id}" ${item.quantity <= 1 ? 'disabled' : ''}>
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <span class="quantity-display">${item.quantity}</span>
+                        <button class="qty-btn increase-btn" data-item-id="${item.__backendId || item.id}">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <button class="remove-btn" data-item-id="${item.__backendId || item.id}">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            `;
+        }
+
+        // Add event listeners to cart item buttons
+        function addCartItemEventListeners() {
+            // Quantity decrease buttons
+            document.querySelectorAll('.decrease-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const itemId = e.currentTarget.dataset.itemId;
+                    updateQuantity(itemId, -1);
+                });
+            });
+
+            // Quantity increase buttons
+            document.querySelectorAll('.increase-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const itemId = e.currentTarget.dataset.itemId;
+                    updateQuantity(itemId, 1);
+                });
+            });
+
+            // Remove buttons
+            document.querySelectorAll('.remove-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const itemId = e.currentTarget.dataset.itemId;
+                    removeItem(itemId);
+                });
+            });
+        }
+
+        // Update item quantity
+        async function updateQuantity(itemId, change) {
+            if (isLoading) return;
+            
+            const item = cartData.find(item => (item.__backendId || item.id) === itemId);
+            if (!item) return;
+
+            const newQuantity = item.quantity + change;
+            if (newQuantity < 1) return;
+
+            isLoading = true;
+            item.quantity = newQuantity;
+
+            if (window.dataSdk) {
+                const result = await window.dataSdk.update(item);
+                if (!result.isOk) {
+                    console.error('Failed to update quantity');
+                    item.quantity -= change; // Revert on error
+                }
+            } else {
+                // Update localStorage
+                localStorage.setItem('natureWorldCart', JSON.stringify(cartData));
+                updateCartDisplay();
+                updateCartCount();
+            }
+
+            isLoading = false;
+        }
+
+        // Remove item from cart
+        async function removeItem(itemId) {
+            if (isLoading) return;
+
+            const item = cartData.find(item => (item.__backendId || item.id) === itemId);
+            if (!item) return;
+
+            isLoading = true;
+
+            if (window.dataSdk) {
+                const result = await window.dataSdk.delete(item);
+                if (!result.isOk) {
+                    console.error('Failed to remove item');
+                }
+            } else {
+                // Remove from localStorage
+                cartData = cartData.filter(item => (item.__backendId || item.id) !== itemId);
+                localStorage.setItem('natureWorldCart', JSON.stringify(cartData));
+                updateCartDisplay();
+                updateCartCount();
+            }
+
+            isLoading = false;
+        }
+
+        // Clear entire cart
+        async function clearCart() {
+            if (isLoading || cartData.length === 0) return;
+            
+            if (!confirm('Are you sure you want to clear your entire cart?')) return;
+
+            isLoading = true;
+
+            if (window.dataSdk) {
+                // Delete all items
+                for (const item of cartData) {
+                    await window.dataSdk.delete(item);
+                }
+            } else {
+                // Clear localStorage
+                cartData = [];
+                localStorage.setItem('natureWorldCart', JSON.stringify(cartData));
+                updateCartDisplay();
+                updateCartCount();
+            }
+
+            isLoading = false;
+        }
+
+        // Update cart summary
+        function updateCartSummary() {
+            const itemCount = cartData.length;
+            const totalQuantity = cartData.reduce((sum, item) => sum + item.quantity, 0);
+            const subtotal = cartData.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const deliveryCost = subtotal >= 5000 ? 0 : (subtotal > 0 ? 500 : 0);
+            const total = subtotal + deliveryCost;
+
+            // Update summary display
+            document.getElementById('summary-count').textContent = totalQuantity;
+            document.getElementById('subtotal').textContent = `KSh ${subtotal.toLocaleString()}`;
+            document.getElementById('delivery-cost').textContent = deliveryCost === 0 ? 'Free' : `KSh ${deliveryCost.toLocaleString()}`;
+            document.getElementById('total-cost').textContent = `KSh ${total.toLocaleString()}`;
+        }
+
+        // Update cart count in navigation
+        function updateCartCount() {
+            const totalQuantity = cartData.reduce((sum, item) => sum + item.quantity, 0);
+            const cartCountElement = document.getElementById('cart-count');
+            const itemCountElement = document.getElementById('item-count');
+            
+            if (cartCountElement) {
+                cartCountElement.textContent = totalQuantity;
+            }
+            if (itemCountElement) {
+                itemCountElement.textContent = cartData.length;
+            }
+        }
+
+        // Proceed to checkout via WhatsApp
+        function proceedToCheckout() {
+            if (cartData.length === 0) return;
+
+            const totalQuantity = cartData.reduce((sum, item) => sum + item.quantity, 0);
+            const subtotal = cartData.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const deliveryCost = subtotal >= 5000 ? 0 : 500;
+            const total = subtotal + deliveryCost;
+
+            let message = `Hello Nature World! I'd like to place an order:\n\n`;
+            message += `*ORDER DETAILS:*\n`;
+            
+            cartData.forEach((item, index) => {
+                message += `${index + 1}. ${item.name}\n`;
+                message += `   Quantity: ${item.quantity}\n`;
+                message += `   Price: KSh ${(item.price * item.quantity).toLocaleString()}\n\n`;
+            });
+
+            message += `*ORDER SUMMARY:*\n`;
+            message += `Items (${totalQuantity}): KSh ${subtotal.toLocaleString()}\n`;
+            message += `Delivery: ${deliveryCost === 0 ? 'Free' : `KSh ${deliveryCost.toLocaleString()}`}\n`;
+            message += `*Total: KSh ${total.toLocaleString()}*\n\n`;
+            message += `Please confirm availability and delivery details. Thank you!`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/254720019555?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        // Initialize page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99a037a6a27d3f24',t:'MTc2MjM4NjI0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
